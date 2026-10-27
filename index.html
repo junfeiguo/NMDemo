@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namak Mandi | Peshawari Restaurant, Tooting, London — From Peshawar with Love</title>
+<meta name="description" content="Namak Mandi — Peshawari cooking in Tooting, London since 2010. Fire-cooked karahi, hand-shaped chapli kebabs, Kabuli pulao and whole lamb Sajji. 100% halal (HMC approved). Book a table, see the menu, order for collection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f1e6; --paper2:#ede6d2; --ink:#1d2a23; --ink2:#43534a;
+  --green:#20392e; --green-d:#12211b; --gold:#9a742f; --gold-l:#c2a053;
+  --line:#d8cfb6; --card:#fffdf6; --sage:#dfe5d5;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.kicker{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.06}
+h2{font-size:clamp(31px,4.6vw,48px);text-transform:uppercase;letter-spacing:.015em}
+h3{font-size:25px}
+section{padding:76px 0}
+.center{text-align:center}
+.note{font-size:13.5px;color:var(--ink2)}
+.rule{display:flex;align-items:center;gap:14px;margin:14px 0 22px}
+.rule:before,.rule:after{content:"";height:1px;background:var(--line);flex:1}
+.rule span{color:var(--gold);font-size:13px}
+.btn{display:inline-block;border:1px solid var(--green);background:var(--green);color:#fdfaf0;padding:13px 30px;font-family:var(--sans);font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;cursor:pointer;border-radius:999px;text-decoration:none;transition:.2s;text-align:center}
+.btn:hover{background:var(--green-d)}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.ghost:hover{background:var(--green);color:#fdfaf0}
+.btn.light{background:transparent;border-color:#cfc39f;color:#f3edda}
+.btn.light:hover{background:#f3edda;color:var(--green-d)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.gold:hover{background:#84611f}
+.btn.small{padding:9px 19px;font-size:11px}
+.caption{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#8a7f63;margin-top:9px}
+.caption b{color:var(--ink)}
+.demo{background:var(--green-d);color:#ddd3b8;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:8px 14px}
+.demo b{color:var(--gold-l)}
+/* ——— header: pill nav, centred wordmark, book button ——— */
+header.site{position:sticky;top:0;z-index:60;background:rgba(245,241,230,.97);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1320px;margin:0 auto}
+.nav .pills{display:flex;gap:8px;flex:1;flex-wrap:wrap}
+.pill{border:1px solid var(--ink);border-radius:999px;padding:8px 16px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:500;background:transparent;cursor:pointer;font-family:var(--sans);color:var(--ink)}
+.pill:hover{background:var(--ink);color:var(--paper)}
+.brand{font-family:var(--serif);font-size:28px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;text-align:center;line-height:1;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.44em;color:var(--gold);margin-top:3px;font-weight:600}
+.nav .tools{display:flex;gap:10px;align-items:center;flex:1;justify-content:flex-end}
+.icon-btn{background:none;border:none;cursor:pointer;font-size:19px;color:var(--ink);position:relative;padding:4px}
+.icon-btn .count{position:absolute;top:-5px;right:-7px;background:var(--gold);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10.5px;display:flex;align-items:center;justify-content:center}
+.burger{display:none;background:none;border:none;font-size:23px;cursor:pointer;color:var(--ink)}
+.mobile-menu{display:none;border-top:1px solid var(--line);padding:10px 22px;background:var(--paper)}
+.mobile-menu a{display:block;padding:9px 0;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--paper2)}
+.searchbar{display:none;border-top:1px solid var(--line);background:var(--paper);padding:14px 22px}
+.searchbar.show{display:flex;gap:10px;justify-content:center}
+.searchbar input{width:min(520px,80vw);padding:12px 18px;border:1px solid var(--line);border-radius:999px;font-family:var(--sans);font-size:15.5px;background:#fff}
+/* ——— hero: full-bleed, dark, cinematic ——— */
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#f5efdb;position:relative;background:#0e1a15 url('https://junfeiguo.github.io/shopdemo/img/hero.webp') center/cover no-repeat;padding:80px 22px}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,15,.55),rgba(10,20,15,.38) 45%,rgba(10,20,15,.72))}
+.hero>*{position:relative}
+.hero .urdu{font-size:26px;color:var(--gold-l);letter-spacing:.06em}
+.hero .welcome{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,25px);color:#e8dfc6;margin-top:4px}
+.hero h1{font-size:clamp(42px,7vw,80px);text-transform:uppercase;letter-spacing:.03em;margin:16px auto 14px;max-width:920px}
+.hero p.lede{max-width:620px;margin:0 auto 28px;color:#ded4b6;font-size:18.5px}
+.hero .cap{position:absolute;left:22px;bottom:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#b7ab8a;text-align:left}
+.hero .scroll{position:absolute;bottom:14px;right:24px;color:#cfc39f;font-size:11px;letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl}
+/* ——— manifesto ——— */
+.manifesto{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.manifesto .stmt{font-family:var(--serif);font-size:clamp(27px,3.4vw,38px);line-height:1.25}
+.manifesto .cols{columns:2;column-gap:28px;font-size:16px;color:var(--ink2);margin-top:18px}
+.manifesto figure img{width:100%;height:300px;object-fit:cover}
+.manifesto figure+figure{margin-top:22px}
+/* ——— three doors ——— */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.door{background:var(--card);border:1px solid var(--line);text-align:center;padding-bottom:26px}
+.door img{height:210px;width:100%;object-fit:cover}
+.door h3{text-transform:uppercase;letter-spacing:.05em;margin:20px 14px 4px}
+.door .sub{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.door p{font-size:15px;color:var(--ink2);padding:10px 22px 18px}
+/* ——— comfort / signature list ——— */
+.sig-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.sig{background:var(--card);border:1px solid var(--line)}
+.sig img{height:160px;width:100%;object-fit:cover}
+.sig .b{padding:14px 15px 16px}
+.sig h4{font-family:var(--serif);font-size:20.5px;line-height:1.15}
+.sig p{font-size:13.5px;color:var(--ink2);margin:5px 0 9px}
+.sig .tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tag{font-size:10px;letter-spacing:.13em;text-transform:uppercase;border:1px solid var(--line);padding:2.5px 7px;border-radius:999px;color:var(--ink2)}
+.tag.hot{border-color:var(--gold);color:var(--gold);font-weight:600}
+/* ——— dark promo (feasts) ——— */
+.promo{background:var(--green-d);color:#f3edda}
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.promo img{height:380px;width:100%;object-fit:cover;border:1px solid #3a5546}
+.promo p{color:#d8cfb0}
+.feast-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.feast{background:#1d352a;border:1px solid #38543f;padding:22px}
+.feast h4{font-family:var(--serif);font-size:23px;color:#fff}
+.feast p{font-size:14px}
+.feast .serves{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:600}
+.feast .price{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold-l)}
+/* ——— journal carousel ——— */
+.carousel{display:flex;gap:18px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
+.carousel::-webkit-scrollbar{height:6px}
+.carousel::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.jcard{flex:0 0 330px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line)}
+.jcard img{height:180px;width:100%;object-fit:cover}
+.jcard .b{padding:18px 20px 20px}
+.jcard h4{font-family:var(--serif);font-size:23px;line-height:1.18;margin-bottom:7px}
+.jcard p{font-size:14px;color:var(--ink2)}
+.jcard .full{display:none;margin-top:9px}
+.jcard.open .full{display:block}
+.jcard .more{background:none;border:none;color:var(--gold);font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;cursor:pointer;margin-top:11px;padding:0}
+/* ——— gifts band ——— */
+.gifts-band{background:var(--sage);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gift-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.gtile{background:var(--card);border:1px solid var(--line);padding:24px 18px;text-align:center;cursor:pointer}
+.gtile:hover{border-color:var(--gold)}
+.gtile .amt{font-family:var(--serif);font-size:36px;font-weight:700}
+.gtile p{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+/* ——— facts strip ——— */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.fact .n{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--green)}
+.fact p{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2)}
+/* ——— menu: tabs + editorial list (Dishoom-style) ——— */
+.menu-tabs{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;border-bottom:2px solid var(--ink);padding-bottom:0;margin-top:10px}
+.mtab{background:none;border:none;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:11px 15px;cursor:pointer;color:var(--ink2);border-bottom:3px solid transparent;margin-bottom:-2px}
+.mtab.on{color:var(--ink);border-bottom-color:var(--gold)}
+.menu-tools{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;margin:18px 0 2px}
+.menu-tools input[type=text]{padding:11px 17px;border:1px solid var(--line);border-radius:999px;width:290px;font-family:var(--sans);font-size:15px;background:#fff}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:1px solid var(--line);padding:10px 15px;border-radius:999px;background:#fff;font-weight:500}
+.toggle input{accent-color:var(--green)}
+.menu-list{max-width:940px;margin:10px auto 0}
+.mcat{font-family:var(--serif);font-size:29px;text-transform:uppercase;text-align:center;margin:38px 0 4px}
+.mcat-sub{text-align:center;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.mrow{display:flex;gap:14px;align-items:baseline;padding:11px 4px;border-bottom:1px dotted var(--line)}
+.mrow .tx{flex:1}
+.mrow h5{font-family:var(--serif);font-size:20.5px;font-weight:600;display:inline}
+.mrow .ds{font-size:14px;color:var(--ink2);display:block;margin-top:1px}
+.mrow .pr{font-family:var(--serif);font-size:19px;font-weight:700;white-space:nowrap}
+.mrow select{padding:6px 8px;border:1px solid var(--line);border-radius:4px;background:#fff;font-family:var(--sans);font-size:13.5px;max-width:170px}
+.add-btn{background:var(--green);color:#fdfaf0;border:none;width:33px;height:33px;border-radius:50%;font-size:18px;cursor:pointer;line-height:1;flex:none;align-self:center}
+.add-btn:hover{background:var(--gold)}
+.mark{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14.5px;margin-left:5px}
+.empty-msg{text-align:center;color:var(--ink2);padding:28px}
+/* allergen */
+.allergen{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.allergen table{width:100%;border-collapse:collapse;background:var(--card);font-size:15px}
+.allergen th,.allergen td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}
+.allergen th{font-family:var(--serif);font-size:18px;background:var(--paper2);width:210px}
+/* forms */
+.panel-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:start}
+.form-card{background:var(--card);border:1px solid var(--line);padding:28px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:6px;color:var(--ink2)}
+.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:4px;font-family:var(--sans);font-size:15.5px;background:#fff;color:var(--ink)}
+.field textarea{min-height:72px;resize:vertical}
+.side-card{background:var(--green-d);color:#e9e2cd;padding:26px}
+.side-card h4{font-family:var(--serif);font-size:23px;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.side-card ul{list-style:none;font-size:14.5px}
+.side-card li{padding:7px 0;border-bottom:1px solid #33503f}
+.side-card li:last-child{border-bottom:none}
+.side-card a{color:var(--gold-l)}
+.summary{display:none;margin-top:18px;border:1.5px dashed var(--gold);background:#fdf6e0;padding:18px;font-size:15px;white-space:pre-wrap;word-break:break-word;text-align:left}
+.summary.show{display:block}
+.summary .btn{margin-top:12px;margin-right:8px}
+.gift-amounts{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.gift-amounts button{border:1px solid var(--green);background:#fff;padding:10px 21px;border-radius:999px;font-family:var(--serif);font-size:19px;font-weight:700;cursor:pointer}
+.gift-amounts button.on{background:var(--green);color:#fdfaf0}
+.gift-preview{background:linear-gradient(135deg,var(--green-d),#2a5340);color:#f3edda;border-radius:10px;padding:26px;text-align:center;border:1px solid var(--gold)}
+.gift-preview .g-brand{font-family:var(--serif);letter-spacing:.2em;font-size:21px;text-transform:uppercase}
+.gift-preview .g-amt{font-family:var(--serif);font-size:44px;color:var(--gold-l);margin:8px 0}
+.gift-preview p{font-size:13px;color:#cfc39f;letter-spacing:.1em;text-transform:uppercase}
+/* planning accordions */
+.plan{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.plan img{width:100%;height:430px;object-fit:cover}
+.acc details{border-bottom:1px solid var(--line);padding:14px 2px}
+.acc summary{font-family:var(--serif);font-size:21.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;text-transform:uppercase;letter-spacing:.04em}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:after{content:"+";color:var(--gold);font-family:var(--sans)}
+.acc details[open] summary:after{content:"–"}
+.acc .bd{font-size:15px;color:var(--ink2);margin-top:8px}
+.acc .bd td{padding:2.5px 16px 2.5px 0}
+.faq{max-width:840px;margin:0 auto}
+/* group feasts */
+.gfeast{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gf{background:var(--card);border:1px solid var(--line);padding:26px;text-align:center}
+.gf h4{font-family:var(--serif);font-size:24px;text-transform:uppercase}
+.gf .when{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:5px 0 10px}
+.gf p{font-size:14.5px;color:var(--ink2)}
+.gf .from{font-family:var(--serif);font-size:21px;font-weight:700;margin-top:12px}
+/* newsletter */
+.newsletter{background:var(--paper2);border-top:1px solid var(--line);text-align:center}
+.newsletter form{max-width:820px;margin:20px auto 0;display:grid;grid-template-columns:1fr 1.4fr 1fr 1.2fr auto;gap:10px}
+.newsletter input,.newsletter select{padding:12px 13px;border:1px solid var(--line);border-radius:4px;font-family:var(--sans);font-size:14.5px;background:#fff;width:100%}
+/* slide panels (basket + booking) */
+.scrim{position:fixed;inset:0;background:rgba(15,25,20,.5);z-index:90;display:none}
+.scrim.show{display:block}
+.panel{position:fixed;top:0;right:-450px;width:430px;max-width:95vw;height:100%;background:var(--paper);z-index:100;box-shadow:-8px 0 30px rgba(15,25,20,.3);transition:right .32s;display:flex;flex-direction:column}
+.panel.open{right:0}
+.panel header{background:var(--green-d);color:#f3edda;padding:17px 20px;display:flex;justify-content:space-between;align-items:center}
+.panel header h3{color:#fff;text-transform:uppercase;font-size:22px}
+.panel .x{background:none;border:none;color:#fff;font-size:25px;cursor:pointer}
+.panel .body{flex:1;overflow-y:auto;padding:20px}
+.panel .foot{padding:16px 20px;border-top:1px solid var(--line);background:var(--card)}
+.bitem{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.bitem .nm{font-family:var(--serif);font-size:18px;line-height:1.2}
+.bitem .vr{font-size:12.5px;color:var(--ink2)}
+.qty{display:flex;align-items:center;gap:8px;margin-top:5px}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--green);background:#fff;cursor:pointer;font-size:15px}
+.qty button:hover{background:var(--green);color:#fff}
+.total-row{display:flex;justify-content:space-between;font-family:var(--serif);font-size:23px;font-weight:700;margin-bottom:12px}
+.times-note{background:var(--paper2);border:1px solid var(--line);padding:11px 14px;font-size:13.5px;margin-bottom:14px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(90px);background:var(--green-d);color:#f3edda;padding:12px 24px;border-radius:999px;font-size:14.5px;z-index:130;transition:.3s;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+/* footer */
+footer.site{background:var(--green-d);color:#cfc39f;padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+footer.site h5{font-family:var(--serif);color:#fff;font-size:19px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+footer.site a{display:block;color:#cfc39f;text-decoration:none;font-size:14.5px;padding:3px 0}
+footer.site a:hover{color:var(--gold-l)}
+footer.site p{font-size:14.5px}
+.foot-base{border-top:1px solid #33503f;margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px}
+@media(max-width:1020px){
+  .sig-row,.facts{grid-template-columns:repeat(2,1fr)}
+  .gift-tiles{grid-template-columns:repeat(2,1fr)}
+  .newsletter form{grid-template-columns:1fr 1fr}
+}
+@media(max-width:780px){
+  .nav .pills{display:none}.burger{display:block}
+  .doors,.feast-cards,.gfeast{grid-template-columns:1fr}
+  .manifesto,.promo-grid,.panel-grid,.plan{grid-template-columns:1fr}
+  .manifesto .cols{columns:1}
+  .sig-row,.facts,.foot-grid{grid-template-columns:1fr}
+  .gift-tiles{grid-template-columns:repeat(2,1fr)}
+  .hero{min-height:78vh}.promo img{height:250px}.plan img{height:260px}
+  .brand{font-size:20px}.nav .tools .bk{display:none}
+  section{padding:54px 0}
+  .mrow{flex-wrap:wrap}
+}
+
+/* ——— v4: ordering, delivery, checkout ——— */
+.open-pill{display:inline-flex;align-items:center;gap:9px;background:rgba(10,20,15,.55);border:1px solid #57705f;color:#f3edda;border-radius:999px;padding:9px 19px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.open-pill .dot{width:9px;height:9px;border-radius:50%;background:#7fc97f;box-shadow:0 0 0 4px rgba(127,201,127,.22)}
+.open-pill.closed .dot{background:#e08a7a;box-shadow:0 0 0 4px rgba(224,138,122,.2)}
+.mode-strip{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;margin:20px 0 4px}
+.mode-btn{border:1.5px solid var(--green);background:#fff;color:var(--green);border-radius:999px;padding:12px 26px;font-family:var(--sans);font-size:13.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;cursor:pointer}
+.mode-btn.on{background:var(--green);color:#fdfaf0}
+.mode-note{text-align:center;font-size:14px;color:var(--ink2);margin-top:9px}
+.fav-btn{background:none;border:none;cursor:pointer;font-size:19px;color:#c9bfa5;flex:none;align-self:center;line-height:1}
+.fav-btn.on{color:#c0392b}
+.mrow.out{opacity:.5}
+.mrow .soldout{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9c3d2e;font-weight:700;border:1px solid #9c3d2e;border-radius:999px;padding:3px 9px;align-self:center;white-space:nowrap}
+.add-btn:disabled{background:#b9b09a;cursor:not-allowed}
+.bitem select,.bitem input[type=text]{width:100%;margin-top:6px;padding:7px 9px;border:1px solid var(--line);border-radius:4px;font-family:var(--sans);font-size:13.5px;background:#fff}
+.upsell{border-top:1.5px dashed var(--gold);margin-top:14px;padding-top:12px}
+.upsell h5{font-family:var(--serif);font-size:19px;margin-bottom:8px}
+.upsell .u-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:14.5px}
+.fee-table{width:100%;border-collapse:collapse;background:var(--card);font-size:15px}
+.fee-table th,.fee-table td{border:1px solid var(--line);padding:11px 13px;text-align:left}
+.fee-table th{font-family:var(--serif);font-size:17.5px;background:var(--paper2)}
+.seg{display:flex;border:1.5px solid var(--green);border-radius:999px;overflow:hidden;margin-bottom:14px}
+.seg button{flex:1;background:#fff;border:none;padding:11px;font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;cursor:pointer;color:var(--green)}
+.seg button.on{background:var(--green);color:#fdfaf0}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 15px;cursor:pointer;font-family:var(--sans);font-size:13.5px}
+.chips button.on{background:var(--gold);border-color:var(--gold);color:#fff}
+.pay-opt{display:flex;gap:10px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:6px;padding:12px 14px;margin-bottom:9px;cursor:pointer;font-size:15px}
+.pay-opt input{accent-color:var(--green)}
+.pay-opt .brand{margin-left:auto;font-weight:600;font-size:13px;letter-spacing:.06em}
+.wallet-btn{width:100%;background:#111;color:#fff;border:none;border-radius:8px;padding:13px;font-size:16px;cursor:pointer;margin-bottom:9px;font-family:var(--sans)}
+.line-row{display:flex;justify-content:space-between;font-size:15px;padding:3.5px 0}
+.line-row.dim{color:var(--ink2)}
+.tracker{margin:16px 0}
+.tstep{display:flex;gap:12px;align-items:flex-start;padding:7px 0;opacity:.38}
+.tstep.done,.tstep.now{opacity:1}
+.tstep .ic{width:27px;height:27px;border-radius:50%;border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;background:#fff}
+.tstep.now .ic{background:var(--gold);border-color:var(--gold);color:#fff}
+.tstep .tt{font-family:var(--serif);font-size:18.5px;line-height:1.15}
+.tstep .ts{font-size:12.5px;color:var(--ink2)}
+.stars{font-size:27px;letter-spacing:4px;cursor:pointer;color:#c9bfa5}
+.stars .on{color:var(--gold)}
+.order-card{background:var(--card);border:1px solid var(--line);padding:18px 20px;margin-bottom:14px}
+.order-card h4{font-family:var(--serif);font-size:21px}
+.points-band{background:var(--green-d);color:#e9e2cd;border-radius:8px;padding:22px;text-align:center}
+.points-band .n{font-family:var(--serif);font-size:40px;color:var(--gold-l);font-weight:700}
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--green-d);display:none;border-top:1px solid #33503f}
+.stickybar a,.stickybar button{flex:1;background:none;border:none;color:#f3edda;font-family:var(--sans);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;padding:15px 0;text-align:center;text-decoration:none;cursor:pointer;font-weight:600}
+.stickybar .mid{background:var(--gold);color:#fff}
+.wa-float{position:fixed;right:18px;bottom:20px;z-index:85;background:#2e7d4f;color:#fff;border-radius:999px;padding:12px 20px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25);display:flex;gap:8px;align-items:center}
+.cookie{position:fixed;left:16px;bottom:16px;z-index:86;background:var(--card);border:1px solid var(--line);box-shadow:0 8px 26px rgba(20,30,25,.22);max-width:350px;padding:18px;display:none}
+.cookie.show{display:block}
+.cookie h5{font-family:var(--serif);font-size:19px;margin-bottom:5px}
+.cookie p{font-size:13.5px;color:var(--ink2);margin-bottom:11px}
+.qr-grid{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.qr-grid img{width:150px;height:150px;border:1px solid var(--line);background:#fff;padding:8px}
+@media(max-width:780px){.stickybar{display:flex}.wa-float{bottom:66px}.cookie{bottom:66px}.qr-grid{grid-template-columns:1fr}}
+
+/* checkout overlay (Shopify-style, like the reference screenshots) */
+.overlay-page{position:fixed;inset:0;background:#f8f4ea;z-index:200;display:none;overflow-y:auto}
+.overlay-page.open{display:block}
+.co-head{max-width:1060px;margin:0 auto;padding:22px 22px 6px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.co-brand{font-family:var(--serif);font-size:25px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.co-secure{font-size:13px;color:var(--ink2);flex:1}
+.co-close{background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:600}
+.co-grid{max-width:1060px;margin:0 auto;padding:10px 22px 60px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}
+.co-h{font-family:var(--sans);font-size:19px;font-weight:600;margin:22px 0 12px;text-transform:none;letter-spacing:0}
+.co-left .field input,.co-left .field select{padding:14px 15px;border-radius:8px;border:1px solid #cfc6ae;font-size:15.5px}
+.co-check{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink2);margin-top:-4px}
+.co-check input{margin-top:3px;accent-color:var(--green)}
+.ship-box{border:1px solid #cfc6ae;border-radius:8px;background:#f1ebdb;padding:14px 16px;font-size:14.5px;color:var(--ink2)}
+.co-err{color:#9c3d2e;font-size:14px;min-height:20px;margin:8px 0;font-weight:500}
+.co-right{background:#f1ebdb;border:1px solid var(--line);border-radius:10px;padding:20px}
+.co-item{display:flex;gap:12px;align-items:center;padding:8px 0}
+.co-thumb{width:52px;height:52px;border-radius:8px;object-fit:cover;position:relative;flex:none;background:var(--paper2)}
+.co-qty{position:absolute;top:-7px;right:-7px;background:var(--green);color:#fff;font-size:11px;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.co-thumbwrap{position:relative;flex:none}
+.co-item .nm{font-size:15px;font-weight:500;flex:1}
+.co-item .vr{display:block;font-size:12.5px;color:var(--ink2);font-weight:400}
+.co-confirm{max-width:1060px;margin:0 auto;padding:26px 22px 70px}
+/* explore fullscreen overlay */
+.explore-overlay{position:fixed;inset:0;z-index:190;display:none;flex-direction:column;background:#14100c url('https://junfeiguo.github.io/shopdemo/img/heroboard.webp') center/cover no-repeat;color:#f3edda}
+.explore-overlay:before{content:"";position:absolute;inset:0;background:rgba(16,12,8,.68)}
+.explore-overlay.open{display:flex}
+.explore-overlay>*{position:relative}
+.ex-top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;gap:12px}
+.ex-close{border-color:#f3edda;color:#f3edda;background:rgba(0,0,0,.25)}
+.ex-brand{font-family:var(--serif);font-size:25px;letter-spacing:.2em;text-transform:uppercase}
+.ex-list{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;text-align:center}
+.ex-list a{font-family:var(--serif);font-size:clamp(30px,5.4vw,50px);color:#efe7d0;text-decoration:none;line-height:1.28}
+.ex-list a:hover{color:var(--gold-l);font-style:italic}
+.ex-bottom{max-width:1060px;width:100%;margin:0 auto;padding:0 24px 26px}
+.ex-bh{display:flex;gap:16px;align-items:baseline;margin-bottom:12px}
+.ex-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ex-card{display:flex;gap:14px;align-items:center;text-decoration:none;color:#f3edda;border-left:1px solid rgba(243,237,218,.35);padding-left:18px}
+.ex-card img{width:110px;height:82px;object-fit:cover}
+.ex-card span{font-family:var(--serif);font-size:19px;line-height:1.25}
+.mthumb{width:64px;height:64px;border-radius:8px;object-fit:cover;flex:none;align-self:center}
+@media(max-width:860px){.co-grid{grid-template-columns:1fr}.ex-cards{grid-template-columns:1fr}.ex-card img{width:84px;height:62px}}
+</style>
+<style>.mthumb,.sig img,.door img,.promo img,.manifesto img,.jcard img,.co-thumb,.gal img{filter:saturate(1.07) contrast(1.03) sepia(.07)}.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gal figure{position:relative}.gal img{width:100%;height:230px;object-fit:cover}.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(15,25,20,.75));color:#f3edda;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:22px 12px 9px}@media(max-width:780px){.gal{grid-template-columns:repeat(2,1fr)}.gal img{height:160px}}</style>
+<style>
+/* v5 design polish */
+.hero{animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{background-size:103%}to{background-size:113%}}
+.ribbon{background:var(--green);color:var(--gold-l);overflow:hidden;white-space:nowrap;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.ribbon .track{display:inline-block;padding:11px 0;font-family:var(--serif);font-size:14px;letter-spacing:.34em;text-transform:uppercase;animation:marq 36s linear infinite}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section h2{font-size:clamp(30px,4.4vw,42px);letter-spacing:.012em}
+.kicker{letter-spacing:.42em}
+.mthumb{width:66px;height:66px}
+.framed{border:1px solid var(--gold);box-shadow:0 0 0 6px var(--paper),0 0 0 7px rgba(154,117,38,.55),0 18px 34px rgba(20,35,28,.16)}
+.trip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.trip figure{position:relative;overflow:hidden}
+.trip img{width:100%;height:250px;object-fit:cover;transition:transform .8s ease}
+.trip figure:hover img{transform:scale(1.05)}
+.trip figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(15,25,20,.78));color:#f3edda;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:26px 12px 9px}
+.darkband{background:var(--green);color:var(--paper)}
+.darkband .grid2{align-items:center}
+.darkband blockquote{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);line-height:1.45;font-style:italic}
+.darkband .who{letter-spacing:.3em;font-size:11.5px;text-transform:uppercase;color:var(--gold-l);margin-top:14px}
+.feast img{width:100%;height:170px;object-fit:cover;margin-bottom:12px}
+.gal{grid-template-columns:repeat(3,1fr)}
+.gal figure{overflow:hidden}
+.gal img{transition:transform .8s ease}
+.gal figure:hover img{transform:scale(1.05)}
+.jcard img{height:190px}
+.dropcap::first-letter{font-family:var(--serif);font-size:52px;line-height:.85;float:left;padding:6px 10px 0 0;color:var(--gold)}
+.footmark{font-family:var(--serif);font-size:clamp(52px,10vw,120px);letter-spacing:.14em;color:rgba(243,237,218,.10);text-align:center;line-height:1;padding:8px 0 0;text-transform:uppercase}
+.sig img{height:220px}
+@media(max-width:780px){.trip{grid-template-columns:1fr}.trip img{height:190px}.gal{grid-template-columns:repeat(2,1fr)}}
+</style>
+<style>
+/* v6 aesthetic pass */
+html{scroll-behavior:smooth}
+::selection{background:#c9a94e;color:#14231c}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 40%,transparent 55%,rgba(5,10,8,.55));}
+.hero .panel h1{font-size:clamp(44px,7.2vw,84px)}
+.hero .urdu{font-size:clamp(24px,3.4vw,36px)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.parallax{position:relative;background:url('img/off-event.jpg') center/cover fixed no-repeat;color:#f5efdb;text-align:center;padding:120px 22px}
+.parallax:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,15,.66),rgba(10,20,15,.45) 50%,rgba(10,20,15,.7))}
+.parallax>*{position:relative}
+.parallax .q{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4.2vw,42px);line-height:1.35;max-width:820px;margin:0 auto}
+.parallax .cap{color:#cbbd8a;margin-top:18px}
+.gal{display:block;columns:3;column-gap:14px}
+.gal figure{margin:0 0 14px;break-inside:avoid}
+.gal img{height:auto}
+.door img{height:210px}
+.sig{overflow:hidden}
+.sig img{transition:transform .8s ease}
+.sig:hover img{transform:scale(1.05)}
+.mrow{transition:background .25s}
+.mrow:hover{background:rgba(154,117,38,.06)}
+.jcard{transition:transform .5s ease,box-shadow .5s ease}
+.jcard:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(20,35,28,.14)}
+@media(max-width:780px){.gal{columns:2}.parallax{background-attachment:scroll;padding:80px 18px}}
+</style>
+</head>
+<body>
+<div class="demo">◆ Concept v6 — styled closely on the client's reference site, now with full online ordering, delivery & demo checkout; <b>all words, dishes &amp; photos are Namak Mandi's own</b>. Demo only: nothing is sent or charged. ◆</div>
+
+<header class="site">
+  <div class="nav">
+    <button class="burger" onclick="toggleMobile()" aria-label="Menu">☰</button>
+    <nav class="pills">
+      <a class="pill" href="#story">Explore</a>
+      <a class="pill" href="#visit">Restaurant</a>
+      <a class="pill" href="#menu">Menus</a>
+      <a class="pill" href="#feasts">Feasts</a>
+      <a class="pill" href="#gifts">Gift Cards</a>
+      <a class="pill" href="#journal">Journal</a>
+    </nav>
+    <a class="brand" href="#top">Namak Mandi<small>Peshawari · Tooting · Est. 2010</small></a>
+    <div class="tools">
+      <button class="icon-btn" onclick="toggleSearch()" aria-label="Search dishes">⌕</button>
+      <button class="icon-btn" onclick="openPanel('basketPanel')" aria-label="Basket">🧺<span class="count" id="basketCount">0</span></button>
+      <button class="btn small bk" onclick="openPanel('bookPanel')">Book a table</button>
+    </div>
+  </div>
+  <div class="searchbar" id="searchbar">
+    <input type="text" id="siteSearch" placeholder="Search dishes: karahi, kebab, vegetarian, lassi…" onkeydown="if(event.key==='Enter'){siteGo()}">
+    <button class="btn small" onclick="siteGo()">Search</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#story">Explore</a><a href="#visit">Restaurant</a><a href="#menu">Menus</a><a href="#feasts">Feasts</a>
+    <a href="#book">Book a table</a><a href="#events">Events</a><a href="#gifts">Gift cards</a><a href="#journal">Journal</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="urdu">خوش آمدید</div>
+  <div class="welcome">Khush amdeed — by the end, we hope you will feel as if you have been to Peshawar with us.</div>
+  <h1>Food that speaks<br>to the soul</h1>
+  <p class="lede">Fire-cooked karahi, hand-shaped chapli kebabs and Kabuli pulao, made fresh the way they are in Peshawar — in Tooting, since 2010.</p>
+  <div><span class="open-pill" id="openPill"><span class="dot"></span>Open now</span></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+    <button class="btn gold" onclick="openPanel('bookPanel')">Book a table</button>
+    <a class="btn light" href="#menu">See the menus</a>
+  </div>
+  <div class="cap">Above: From the grill at Namak Mandi — cooked over fire, never pre-cooked</div>
+  <div class="scroll">Scroll · Scroll · Scroll</div>
+</div>
+
+<div class="ribbon" aria-hidden="true"><div class="track">Peshawari since 2010 &nbsp;◆&nbsp; 100% Halal · HMC Approved &nbsp;◆&nbsp; Wood-fired grill &amp; karahi &nbsp;◆&nbsp; Traditional floor seating &nbsp;◆&nbsp; Tooting Bec · London &nbsp;◆&nbsp; Peshawari since 2010 &nbsp;◆&nbsp; 100% Halal · HMC Approved &nbsp;◆&nbsp; Wood-fired grill &amp; karahi &nbsp;◆&nbsp; Traditional floor seating &nbsp;◆&nbsp; Tooting Bec · London &nbsp;◆&nbsp;</div></div>
+
+<section id="story">
+  <div class="wrap">
+    <div class="manifesto">
+      <div>
+        <div class="kicker">Our story</div>
+        <p class="stmt" style="margin-top:12px">Namak Mandi is a love letter to Peshawar — its food and its people, its old city and its open fires, its gentle spices and its great gatherings.</p>
+        <div class="cols">
+          <p class="dropcap">In 2010, the true cooking of Peshawar was hard to find in London. The food of Khyber Pakhtunkhwa is milder than that of Lahore or Karachi — cumin, coriander, cardamom and black pepper; green chilli, ginger and garlic — and proud of its restraint.</p>
+          <p style="margin-top:10px">So we carried our family recipes to Upper Tooting Road and cooked them without shortcuts: spices ground by hand, nothing pre-cooked or pre-packed, karahi meeting the flame only when you order. Fifteen years on, the room is still busy, the fire is still lit, and every dish is still a letter home.</p>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+          <span class="tag hot">Since 2010</span><span class="tag hot">100% Halal · HMC approved</span><span class="tag">No alcohol</span><span class="tag">Floor seating</span>
+        </div>
+      </div>
+      <div>
+        <figure>
+          <img src="https://junfeiguo.github.io/shopdemo/img/gate.webp" alt="A gateway in old Peshawar">
+          <figcaption class="caption"><b>Above:</b> A gateway in the old city of Peshawar, where our recipes begin</figcaption>
+        </figure>
+        <figure>
+          <img src="img/off-flowers.webp" alt="A board of grilled dishes at Namak Mandi" style="height:230px">
+          <figcaption class="caption"><b>Right:</b> From the grill — tikka, chops and kebabs, as they arrive at the table</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="trip">
+      <figure><img src="img/off-pulao.jpg" alt="Kabuli Pulao" loading="lazy"><figcaption>Above: Kabuli Pulao, crowned with carrot &amp; raisin</figcaption></figure>
+      <figure><img src="img/off-chef.jpg" alt="Our chef with a platter" loading="lazy"><figcaption>The chef, and his platter</figcaption></figure>
+      <figure><img src="img/off-sajji-whole.jpg" alt="Whole Lamb Sajji" loading="lazy"><figcaption>Right: the whole Lamb Sajji</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="doors">
+      <div class="door"><img src="https://junfeiguo.github.io/shopdemo/img/mixgrill.webp" alt="Mixed grill"><h3>Menus</h3><div class="sub">Karahi, grills, pulao &amp; late lassis</div><p>Served from noon until midnight — from the first chapli kebab to the last cup of something cold and sweet.</p><a class="btn ghost small" href="#menu">Explore menus</a></div>
+      <div class="door"><img src="https://junfeiguo.github.io/shopdemo/img/shopfront.webp" alt="The restaurant on Upper Tooting Road"><h3>Reservations</h3><div class="sub">For bookings &amp; large groups</div><p>Tables and chairs, or cushions on the floor, for two or for twenty. Book ahead — or simply walk in.</p><button class="btn ghost small" onclick="openPanel('bookPanel')">Book a table</button></div>
+      <div class="door"><img src="https://junfeiguo.github.io/shopdemo/img/swhole.webp" alt="Whole lamb Sajji"><h3>Feasts &amp; Gifts</h3><div class="sub">Sajji, platters &amp; gift cards</div><p>A leg, half or whole lamb on the spit, feast platters for the table, and gift cards for the people you feed best.</p><a class="btn ghost small" href="#feasts">Order a feast</a></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker">Peshawari comfort food</div>
+      <h2>Eat your way through the old city</h2>
+      <div class="rule"><span>◆</span></div>
+      <p style="max-width:700px;margin:0 auto 26px;color:var(--ink2)">Begin with a hand-shaped chapli kebab, still crackling from the pan. Move to the grill — chops, tikka, ribs. Then let a lamb karahi take the middle of the table, with Kabuli pulao and naan torn and passed around. If it is your first visit, start with these four.</p>
+    </div>
+    <div class="sig-row" id="sigRow"></div>
+    <div class="center" style="margin-top:26px"><a class="btn" href="#menu">View the full menu</a></div>
+  </div>
+</section>
+
+<section class="promo" id="feasts">
+  <div class="wrap">
+    <div class="promo-grid">
+      <div>
+        <div class="kicker" style="color:var(--gold-l)">Lamb Sajji · Now taking orders</div>
+        <h2 style="color:#f3edda;margin-top:10px">A whole feast,<br>on one spit</h2>
+        <div class="rule"><span>◆</span></div>
+        <p>Doors are happily open to a good feast. Order a leg, half or whole lamb for your table or your party — simply seasoned, slow-roasted until it falls from the bone. Sajji is cooked to order, so we ask for <b style="color:#fff">one day's notice</b> and a deposit to confirm. Book a table to eat it here, or add it to your basket and collect the celebration.</p>
+        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn gold" onclick="scrollToId('feastCards')">See the feasts</button>
+          <a class="btn light" href="#events">Plan a party</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://junfeiguo.github.io/shopdemo/img/sleg.webp" alt="Lamb Sajji leg">
+        <div class="caption" style="color:#a89e80"><b style="color:#e6ddc2">Above:</b> Lamb Sajji — order today, feast tomorrow</div>
+      </div>
+    </div>
+    <div class="feast-cards" id="feastCards"></div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    </div>
+</section>
+<section class="parallax">
+  <div class="q">"A table in Tooting, a feast from Peshawar — come hungry, leave family."</div>
+  <p class="cap">ABOVE: CATERING, THE NAMAK MANDI WAY</p>
+</section>
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="kicker">Gallery</div>
+    <h2 style="font-size:34px">From the restaurant &amp; the road</h2>
+    <div class="rule"><span>◆</span></div>
+    <div class="gal">
+      <figure><img src="img/off-chef.jpg" alt="Our chef with a platter" loading="lazy"><figcaption>The chef, and his platter</figcaption></figure>
+      <figure><img src="img/off-g2.jpg" alt="At Namak Mandi" loading="lazy"><figcaption>In the kitchen</figcaption></figure>
+      <figure><img src="img/off-g4.jpg" alt="Celebrations at Namak Mandi" loading="lazy"><figcaption>Celebrations</figcaption></figure>
+      <figure><img src="img/off-g7.jpg" alt="From the grill" loading="lazy"><figcaption>From the grill</figcaption></figure>
+      <figure><img src="img/off-flowers.webp" alt="Tables dressed for a celebration" loading="lazy"><figcaption>Dressed for the occasion</figcaption></figure>
+      <figure><img src="img/off-iftar.jpg" alt="Iftar at Namak Mandi" loading="lazy"><figcaption>Iftar, together</figcaption></figure>
+    </div>
+    <p class="note" style="margin-top:12px">Photographs from Namak Mandi's own kitchen, dining room and catering events.</p>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="wrap">
+    <div class="kicker">Explore · From the kitchen</div>
+    <h2 style="font-size:36px">Stories, guides &amp; how to order well</h2>
+    <div class="rule"><span>◆</span></div>
+    <div class="carousel" id="journalRow"></div>
+  </div>
+</section>
+
+<section class="gifts-band" id="gifts">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker">The gift shop</div>
+      <h2 style="font-size:36px">For all persons &amp; purses</h2>
+      <div class="rule"><span>◆</span></div>
+      <p class="note" style="max-width:560px;margin:0 auto 22px">The simplest gift we sell is a table. Choose an amount, write the card, and we will do the rest — nothing is charged until we confirm with you.</p>
+    </div>
+    <div class="gift-tiles">
+      <div class="gtile" onclick="goGift(25)"><div class="amt">£25</div><p>Gift card · In restaurant</p></div>
+      <div class="gtile" onclick="goGift(50)"><div class="amt">£50</div><p>Gift card · Most loved</p></div>
+      <div class="gtile" onclick="goGift(100)"><div class="amt">£100</div><p>Gift card · A full feast</p></div>
+      <div class="gtile" onclick="goGift(150)"><div class="amt">£150</div><p>Gift card · The Sajji fund</p></div>
+    </div>
+    <div class="panel-grid" style="margin-top:30px">
+      <div class="form-card">
+        <h3 style="text-transform:uppercase;margin-bottom:10px">Your gift card</h3>
+        <div class="gift-amounts" id="giftAmounts">
+          <button type="button" onclick="setGift(25)">£25</button>
+          <button type="button" class="on" onclick="setGift(50)">£50</button>
+          <button type="button" onclick="setGift(100)">£100</button>
+          <button type="button" onclick="setGift(150)">£150</button>
+        </div>
+        <form id="giftForm" onsubmit="return submitGift(event)">
+          <div class="frow">
+            <div class="field"><label>Your name</label><input type="text" id="gfName" required></div>
+            <div class="field"><label>Your phone</label><input type="tel" id="gfPhone" required></div>
+          </div>
+          <div class="field"><label>Who is it for?</label><input type="text" id="gfFor" oninput="updGift()"></div>
+          <div class="field"><label>Message on the card</label><textarea id="gfMsg" oninput="updGift()" placeholder="With love, and an appetite…"></textarea></div>
+          <button class="btn" type="submit">Prepare gift card request</button>
+        </form>
+        <div class="summary" id="giftSummary"></div>
+      </div>
+      <div>
+        <div class="gift-preview">
+          <div class="g-brand">Namak Mandi</div>
+          <p>Gift card · Valid in the restaurant, Tooting</p>
+          <div class="g-amt" id="gpAmt">£50</div>
+          <p id="gpFor">For: —</p>
+          <p id="gpMsg" style="text-transform:none;letter-spacing:0;font-family:var(--serif);font-style:italic;font-size:17px;margin-top:8px"></p>
+          <p style="margin-top:12px">Food that speaks to the soul</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <div class="kicker">Proud facts</div>
+      <h2 style="font-size:34px">Looked after, since 2010</h2>
+      <div class="rule"><span>◆</span></div>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="n">2010</div><p>The year the fire was lit</p></div>
+      <div class="fact"><div class="n">100%</div><p>Halal · HMC approved</p></div>
+      <div class="fact"><div class="n">46</div><p>Dishes on the menu</p></div>
+      <div class="fact"><div class="n">1 min</div><p>From Tooting Bec station</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="darkband">
+  <div class="wrap grid2">
+    <div><img class="framed" src="img/off-lkarahi.jpg" alt="Lamb Karahi at Namak Mandi" style="width:100%;height:340px;object-fit:cover" loading="lazy">
+    <p class="cap" style="color:#cbbd8a">ABOVE: THE LAMB KARAHI, AS IT LEAVES THE KITCHEN</p></div>
+    <div>
+      <div class="kicker" style="color:var(--gold-l)">From the tandoor &amp; the wok</div>
+      <blockquote>"The karahi arrives still singing from the flame — tomatoes just broken, ginger in ribbons, green chilli on top. This is Peshawar on a plate, and Tooting knows it."</blockquote>
+      <p class="who">— The kitchen at Namak Mandi</p>
+      <p style="margin-top:16px"><button class="btn gold" onclick="orderNow('delivery')">Order the Karahi · from £18.99</button></p>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:var(--card);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker">Menus · Served from noon daily</div>
+      <h2>The menu</h2>
+      <div class="rule"><span>◆</span></div>
+      <p class="note" style="max-width:660px;margin:0 auto">All food is halal. Prices are our dine-in menu; collection prices may differ slightly and are confirmed with your order. Add dishes to your basket to order for collection — or bring your basket to a booking and we will have it ready when you sit down. <span style="white-space:nowrap">(V) vegetarian · (S) signature · (P) pre-order</span></p>
+    </div>
+    <div class="mode-strip">
+      <button class="mode-btn" onclick="orderNow('delivery')">🚗 Order delivery</button>
+      <button class="mode-btn" onclick="orderNow('collection')">🛍️ Order collection</button>
+      <button class="mode-btn" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})">Delivery zones &amp; fees</button>
+    </div>
+    <p class="mode-note">Add dishes below, then check out — pay by card, Apple Pay, Google Pay or PayPal. Delivery from £12, free over £35 nearby.</p>
+    <div class="menu-tabs" id="catTabs"></div>
+    <div class="menu-tools">
+      <input type="text" id="menuSearch" placeholder="Search the menu…" oninput="renderMenu()">
+      <label class="toggle"><input type="checkbox" id="favOnly" onchange="renderMenu()"> ♥ Favourites only</label>
+      <label class="toggle"><input type="checkbox" id="vegOnly" onchange="renderMenu()"> Show only (V)</label>
+      <label class="toggle"><input type="checkbox" id="hidePre" onchange="renderMenu()"> Hide pre-order (P)</label>
+    </div>
+    <div class="menu-list" id="menuList"></div>
+  </div>
+</section>
+
+<section class="allergen">
+  <div class="wrap">
+    <div class="kicker">Food, drink &amp; allergens</div>
+    <h2 style="font-size:33px">Before you order</h2>
+    <div class="rule"><span>◆</span></div>
+    <p style="max-width:760px;margin-bottom:18px">Our kitchen handles milk, gluten (wheat in naan and breads), nuts, sesame, eggs, fish, mustard, celery and soya, and many dishes share pans and fryers — so we cannot promise any dish is completely free of an allergen. Talk to us first; we will always check a dish's ingredients with you.</p>
+    <table>
+      <tr><th>Allergies &amp; intolerances</th><td>Tell us when you book, order or are seated. Our team will confirm the ingredients of the dishes you choose.</td></tr>
+      <tr><th>Vegetarian</th><td>Marked (V) on the menu, with a filter above. Vegetarian dishes are cooked in our shared kitchen.</td></tr>
+      <tr><th>Halal</th><td>All of our meat is halal and HMC approved. We do not serve alcohol, and alcohol cannot be brought in.</td></tr>
+      <tr><th>Heat</th><td>Peshawari cooking is gently spiced — ask and we will happily make a dish milder, or hotter.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker">Reservations</div>
+      <h2>Book a table, or simply walk in</h2>
+      <div class="rule"><span>◆</span></div>
+      <p style="max-width:660px;margin:0 auto;color:var(--ink2)">We save room for walk-ins every day, and we gladly take bookings for tables of two to twenty — at a table, or on cushions around a low table, the traditional way. Evenings are busy: if your time is not in the panel, come along anyway and we will seat you as soon as we can.</p>
+      <div style="margin-top:22px"><button class="btn" onclick="openPanel('bookPanel')">Open the booking panel</button></div>
+      <p class="note" style="margin-top:14px">Tables are held for 15 minutes · Sittings are 2 hours · Friday we open at 2pm, all other days at noon</p>
+    </div>
+    <div style="margin-top:44px">
+      <div class="center"><div class="kicker">Group feasts</div><h2 style="font-size:34px">Feasting, together</h2><div class="rule"><span>◆</span></div></div>
+      <div class="gfeast">
+        <div class="gf"><h4>The Shared Table</h4><div class="when">Lunch &amp; dinner · From 2 guests</div><p>Chapli kebabs and tikka to start, karahi and pulao in the middle, naan passed around. Built around our Classic Platter and made for sharing.</p><div class="from">From £29.99 for two</div></div>
+        <div class="gf"><h4>The Family Feast</h4><div class="when">Groups of 10+ · Private spaces</div><p>Grand and Supreme platters, karahi by the kilo and rice by the tray — a Peshawari family table, scaled up for birthdays and gatherings.</p><div class="from">From £59.99 for 3–4</div></div>
+        <div class="gf"><h4>The Sajji Celebration</h4><div class="when">Pre-order · One day's notice</div><p>A leg, half or whole lamb at the centre of the room. Weddings, engagements and the days that deserve a centrepiece.</p><div class="from">From £99.99 · Serves 4–5</div></div>
+      </div>
+      <p class="note center" style="margin-top:16px">For groups over 20, or a date in mind, use the events enquiry below or call the events team on <a href="tel:+447428922871">074 2892 2871</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="events" style="background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="panel-grid">
+      <div>
+        <div class="kicker">Events &amp; private dining</div>
+        <h2 style="font-size:36px">Weddings, birthdays<br>&amp; great gatherings</h2>
+        <div class="rule"><span>◆</span></div>
+        <img src="img/off-event.jpg" alt="A table set for a celebration" style="width:100%;height:300px;object-fit:cover">
+        <div class="caption"><b>Above:</b> Private dining at Namak Mandi — cooked fresh on the day</div>
+      </div>
+      <div class="form-card">
+        <h3 style="text-transform:uppercase;margin-bottom:12px">Make an enquiry</h3>
+        <form id="eventForm" onsubmit="return submitEvent(event)">
+          <div class="frow">
+            <div class="field"><label>Your name</label><input type="text" id="evName" required></div>
+            <div class="field"><label>Phone</label><input type="tel" id="evPhone" required></div>
+          </div>
+          <div class="field"><label>Email</label><input type="email" id="evEmail" placeholder="you@example.com"></div>
+          <div class="frow">
+            <div class="field"><label>Date of event</label><input type="date" id="evDate"></div>
+            <div class="field"><label>Guests</label><input type="number" id="evGuests" min="1" placeholder="e.g. 30"></div>
+          </div>
+          <div class="field"><label>Type of event</label>
+            <select id="evType"><option>Private dining (groups of 10+)</option><option>Wedding</option><option>Engagement</option><option>Birthday</option><option>Corporate</option><option>Charity</option><option>Other</option></select></div>
+          <div class="field"><label>Tell us more</label><textarea id="evMsg" placeholder="The occasion, the food you have in mind, anything we should know…"></textarea></div>
+          <button class="btn" type="submit">Prepare enquiry</button>
+        </form>
+        <div class="summary" id="eventSummary"></div>
+        <p class="note" style="margin-top:13px">Events team: <a href="tel:+447428922871">074 2892 2871</a> · <a href="mailto:events@namakmandi.co.uk">events@namakmandi.co.uk</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="delivery" style="background:var(--paper2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Delivery, sorted</div>
+    <h2 style="font-size:36px">From our fire to your front door</h2>
+    <div class="rule"><span>◆</span></div>
+    <div class="panel-grid">
+      <div>
+        <p style="color:var(--ink2);max-width:560px">Order direct here and we deliver it ourselves within our neighbourhood zones — no marketplace mark-ups, and the kitchen sees your order the moment you place it. Further afield, our partners at Uber Eats, Deliveroo and Just Eat will bring it to you.</p>
+        <div class="qr-grid" style="margin-top:26px">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=6&data=https%3A%2F%2Fjunfeiguo.github.io%2Fshopdemo%2F%23menu" alt="QR code to open the menu and order">
+          <div>
+            <h3 style="font-size:23px;text-transform:uppercase">At the table? Scan, order &amp; pay</h3>
+            <p class="note" style="margin-top:6px;font-size:14.5px">Every table carries this code. Scan it, order from your phone and pay in seconds — no queue at the counter, no waiting for the bill. Your food comes straight from the kitchen to your table number.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table class="fee-table">
+          <tr><th>Zone</th><th>Postcodes</th><th>Fee</th><th>Free over</th></tr>
+          <tr><td><b>Near</b> · ~35–50 min</td><td>SW17 · SW16 · SW18 · SW19 · CR4</td><td>£2.49</td><td>£35</td></tr>
+          <tr><td><b>Wider London</b> · ~50–70 min</td><td>Other SW &amp; SE postcodes</td><td>£3.99</td><td>£50</td></tr>
+          <tr><td><b>Collection</b> · ~15–25 min</td><td>From the counter, Tooting</td><td>Free</td><td>—</td></tr>
+        </table>
+        <p class="note" style="margin-top:10px">Direct delivery minimum order £12. Scheduled orders welcome up to 2 days ahead — including Sajji, which always needs its day's notice. Zones, fees and minimums are set by the restaurant and confirmed at checkout. <i>(Demo values — to be confirmed before launch.)</i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="orders">
+  <div class="wrap">
+    <div class="kicker">Namak Circle · Loyalty</div>
+    <h2 style="font-size:36px">Good guests get fed back</h2>
+    <div class="rule"><span>◆</span></div>
+    <div class="panel-grid">
+      <div>
+        <p style="color:var(--ink2);max-width:540px">Every direct order earns <b>1 point for every £1</b>. At 100 points we take £5 off your next order, automatically. Your points, past orders and one-tap reorders live right here — no app to download, no card to stamp.</p>
+        <div id="orderHistory" style="margin-top:20px"></div>
+      </div>
+      <div>
+        <div class="points-band">
+          <p style="letter-spacing:.22em;text-transform:uppercase;font-size:12px">Your Namak Circle balance</p>
+          <div class="n" id="pointsBalance">0 pts</div>
+          <p id="pointsNote">Order direct to start earning.</p>
+        </div>
+        <div class="side-card" style="margin-top:18px">
+          <h4>Why order direct?</h4>
+          <ul>
+            <li>Lower prices than the marketplaces — the commission stays in the food.</li>
+            <li>The kitchen sees allergies and notes exactly as you wrote them.</li>
+            <li>Points on every order, and first word on feast nights.</li>
+            <li>Real people on it: questions on <a href="tel:+442087676120">020 8767 6120</a>.</li>
+          </ul>
+        </div>
+        <p class="note" style="margin-top:14px">Just had a meal with us? <a href="https://www.google.com/maps/search/?api=1&query=Namak+Mandi+25+Upper+Tooting+Road+London+SW17+7TS" target="_blank" rel="noopener">Leave a Google review</a> — it feeds a small restaurant more than you know.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker">The restaurant · Tooting</div>
+    <h2 style="font-size:38px">Planning your visit</h2>
+    <div class="rule"><span>◆</span></div>
+    <div class="plan">
+      <div>
+        <img src="https://junfeiguo.github.io/shopdemo/img/shopfront.webp" alt="Namak Mandi on Upper Tooting Road">
+        <div class="caption"><b>Above:</b> Namak Mandi, 25 Upper Tooting Road — one minute from Tooting Bec</div>
+        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Namak+Mandi+25+Upper+Tooting+Road+London+SW17+7TS" target="_blank" rel="noopener">Open in maps</a>
+          <button class="btn ghost small" onclick="copyAddress()">Copy address</button>
+          <button class="btn ghost small" onclick="openPanel('bookPanel')">Book this restaurant</button>
+        </div>
+      </div>
+      <div class="acc">
+        <details open><summary>Find us &amp; contact</summary><div class="bd">25 Upper Tooting Road, London SW17 7TS<br>Phone: <a href="tel:+442087676120">020 8767 6120</a><br>Email: <a href="mailto:info@namakmandi.co.uk">info@namakmandi.co.uk</a></div></details>
+        <details><summary>Opening times</summary><div class="bd"><table>
+          <tr><td>Monday – Thursday</td><td>12pm – 12am</td></tr>
+          <tr><td>Friday</td><td>2pm – 12am</td></tr>
+          <tr><td>Saturday – Sunday</td><td>12pm – 12am</td></tr></table>Public holidays: please check with the restaurant.</div></details>
+        <details><summary>Transport &amp; parking</summary><div class="bd">Tooting Bec station is a one-minute walk. Buses stop on Upper Tooting Road. Street parking nearby is usually free.</div></details>
+        <details><summary>Dining options</summary><div class="bd">Table and chairs, or traditional floor seating with cushions around a low table. Groups of up to 20 can book online; larger parties and private spaces are arranged through the events team. A Sajji or a basket of food can be pre-ordered with your booking.</div></details>
+        <details><summary>Facilities</summary><div class="bd">Prayer space can be arranged in the restaurant — just ask (Tooting Islamic Centre is also a short walk). High chairs are available; tell us when you book. All food is halal (HMC approved) and no alcohol is served or may be brought in.</div></details>
+        <details><summary>Delivery &amp; collection</summary><div class="bd">Order from the menu here and collect from our counter — payment is taken when you collect. For delivery, find us on Uber Eats, Deliveroo and Just Eat, or through <a href="https://dispatchio.store/namak-mandi" target="_blank" rel="noopener">Dispatchio</a>.</div></details>
+      </div>
+    </div>
+    <div style="margin-top:52px">
+      <div class="center"><div class="kicker">Frequently asked questions</div><h2 style="font-size:32px">Before you come</h2><div class="rule"><span>◆</span></div></div>
+      <div class="acc faq" id="faqList"></div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="wrap">
+    <div class="kicker">Newsletter</div>
+    <h2 style="font-size:32px">Subscribe to the Namak Mandi newsletter</h2>
+    <p class="note" style="max-width:580px;margin:10px auto 0">First word on feast nights, new dishes and seasonal menus — straight to your inbox, never too often.</p>
+    <form id="newsForm" onsubmit="return submitNews(event)">
+      <input type="text" id="nwName" placeholder="First name *" required>
+      <input type="email" id="nwEmail" placeholder="Email address *" required>
+      <input type="text" id="nwBday" placeholder="Birthday (optional)" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+      <select id="nwHow"><option value="">You usually…</option><option>Dine in</option><option>Order for collection</option><option>Come for events</option></select>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <p class="note" style="margin-top:10px">Birthday is only ever used for an annual surprise. * Required.</p>
+    <div class="summary" id="newsSummary" style="max-width:760px;margin-left:auto;margin-right:auto"></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h5>Visit us</h5><p>Namak Mandi<br>25 Upper Tooting Road<br>London SW17 7TS<br><br>020 8767 6120<br>info@namakmandi.co.uk<br><br>Mon–Thu 12pm–12am<br>Fri 2pm–12am · Sat–Sun 12pm–12am</p></div>
+      <div><h5>Eat &amp; order</h5><a href="#menu">Menus</a><a href="#book">Reservations</a><a href="#feasts">Feasts &amp; Sajji</a><a href="#menu">Order for collection</a><a href="#gifts">Gift cards</a></div>
+      <div><h5>Discover</h5><a href="#story">Our story</a><a href="#journal">Journal</a><a href="#events">Events &amp; private dining</a><a href="#visit">Planning your visit</a><a href="#visit">FAQs</a></div>
+      <div><h5>Support</h5><a href="#visit">Contact us</a><a href="#menu">Allergens &amp; dietary</a><a href="#events">Groups enquiry</a><a href="https://www.instagram.com/namakmandi.restaurant/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/namakmandi.restaurant" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="footmark">Namak Mandi</div>
+    <div class="foot-base"><span>© Namak Mandi, Tooting — since 2010. All food halal, HMC approved.</span><span>Concept v4 · Layout styled on the client's reference; every word, dish and photograph is Namak Mandi's own.</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" onclick="closePanels()"></div>
+
+<aside class="panel" id="bookPanel" aria-label="Book a table">
+  <header><h3>Book a table</h3><button class="x" onclick="closePanels()">×</button></header>
+  <div class="body">
+    <div class="times-note">Book anytime. If your desired time is not available, simply walk in — we keep room for walk-ins every day. Your booking is confirmed only when we reply.</div>
+    <form id="bookForm" onsubmit="return submitBooking(event)">
+      <div class="frow">
+        <div class="field"><label>Guests</label><select id="bkGuests"></select></div>
+        <div class="field"><label>Seating</label><select id="bkSeating"><option>Table and chairs</option><option>Floor seating (traditional)</option></select></div>
+      </div>
+      <div class="frow">
+        <div class="field"><label>Date</label><input type="date" id="bkDate" required onchange="fillTimes()"></div>
+        <div class="field"><label>Time</label><select id="bkTime" required></select></div>
+      </div>
+      <p class="note" id="bkHoursNote" style="margin:-4px 0 12px"></p>
+      <div class="field"><label>Your name</label><input type="text" id="bkName" required placeholder="Full name"></div>
+      <div class="frow">
+        <div class="field"><label>Phone</label><input type="tel" id="bkPhone" required placeholder="07…"></div>
+        <div class="field"><label>Email</label><input type="email" id="bkEmail" placeholder="Optional"></div>
+      </div>
+      <div class="field"><label>Allergies, celebrations, anything else</label><textarea id="bkNotes" placeholder="A birthday, a high chair, a quiet corner…"></textarea></div>
+      <label class="toggle" style="margin-bottom:16px"><input type="checkbox" id="bkPreorder"> Add my basket as a pre-order</label>
+      <br><button class="btn" style="width:100%" type="submit">Prepare booking request</button>
+    </form>
+    <div class="summary" id="bookSummary"></div>
+  </div>
+</aside>
+
+<aside class="panel" id="basketPanel" aria-label="Your basket">
+  <header><h3>Your basket · Collection</h3><button class="x" onclick="closePanels()">×</button></header>
+  <div class="body" id="basketItems"></div>
+  <div class="foot">
+    <div class="total-row"><span>Total</span><span id="basketTotal">£0.00</span></div>
+    <button class="btn gold" style="width:100%;padding:15px" onclick="openCheckout()">Go to checkout · Delivery or collection</button>
+    <p class="note" style="margin-top:11px">Pay online by card, Apple Pay, Google Pay or PayPal — or cash when you collect. Promo codes and Namak Circle points are applied at checkout.</p>
+    <div style="display:none"><input type="text" id="coName"><input type="tel" id="coPhone"><select id="coTime"></select><input type="text" id="coNotes"><div class="summary" id="orderSummary"></div></div>
+  </div>
+</aside>
+
+<div class="overlay-page" id="checkoutOverlay" aria-label="Checkout">
+  <div class="co-head">
+    <span class="co-brand">Namak Mandi</span>
+    <span class="co-secure">🔒 Secure checkout · Demo — no real payment is taken</span>
+    <button class="co-close" onclick="closeCheckout()">← Back to basket</button>
+  </div>
+  <div class="co-grid" id="coMain">
+    <div class="co-left">
+      <form id="coForm" onsubmit="return placeOrder(event)">
+        <h3 class="co-h">Contact</h3>
+        <div class="field"><input type="email" id="coEmail" placeholder="Email" autocomplete="email"></div>
+        <label class="co-check"><input type="checkbox" id="coMarketing" checked> Email me with news, feast nights and offers</label>
+        <h3 class="co-h">How would you like it?</h3>
+        <div class="seg" id="modeSeg">
+          <button type="button" id="segDelivery" onclick="setMode('delivery')">Delivery</button>
+          <button type="button" id="segCollection" onclick="setMode('collection')">Collection</button>
+        </div>
+        <div id="deliveryFields">
+          <h3 class="co-h">Delivery address</h3>
+          <div class="field"><select id="coCountry"><option>United Kingdom</option></select></div>
+          <div class="frow">
+            <div class="field"><input type="text" id="coFirst" placeholder="First name"></div>
+            <div class="field"><input type="text" id="coLast" placeholder="Last name"></div>
+          </div>
+          <div class="field"><input type="text" id="coAddr" placeholder="Address"></div>
+          <div class="field"><input type="text" id="coAddr2" placeholder="Apartment, suite, etc. (optional)"></div>
+          <div class="frow">
+            <div class="field"><input type="text" id="coCity" placeholder="City" value="London"></div>
+            <div class="field"><input type="text" id="coPostcode" placeholder="Postcode" oninput="zoneChanged()"></div>
+          </div>
+          <div class="field"><input type="tel" id="coPhone" placeholder="Phone — the driver may call"></div>
+          <h3 class="co-h">Delivery method</h3>
+          <div class="ship-box" id="shipBox">Enter your postcode and we will work out your zone, fee and arrival time.</div>
+        </div>
+        <div id="collectionFields" style="display:none">
+          <h3 class="co-h">Collection</h3>
+          <div class="ship-box">Collect from the counter: <b>Namak Mandi, 25 Upper Tooting Road, London SW17 7TS</b>. Payment by card, wallet or cash at the counter.</div>
+          <div class="frow" style="margin-top:12px">
+            <div class="field"><label>Your name</label><input type="text" id="coNameC" placeholder="Name for the order"></div>
+            <div class="field"><label>Phone</label><input type="tel" id="coPhoneC" placeholder="07…"></div>
+          </div>
+        </div>
+        <h3 class="co-h">When?</h3>
+        <div class="seg" id="whenSeg">
+          <button type="button" id="whenAsap" class="on" onclick="setWhen('asap')">As soon as possible</button>
+          <button type="button" id="whenLater" onclick="setWhen('later')">Schedule for later</button>
+        </div>
+        <div class="field" id="whenField" style="display:none"><label>Choose a time (we open noon, Fridays 2pm)</label><select id="coWhen"></select></div>
+        <div class="field"><label>Allergies or notes for the kitchen</label><input type="text" id="coNotes" placeholder="Tell us about allergies here — the kitchen reads every word"></div>
+        <h3 class="co-h">Tip the team</h3>
+        <div class="chips" id="tipChips">
+          <button type="button" data-tip="0" class="on" onclick="setTip(0)">No tip</button>
+          <button type="button" data-tip="5" onclick="setTip(5)">5%</button>
+          <button type="button" data-tip="10" onclick="setTip(10)">10%</button>
+          <button type="button" data-tip="15" onclick="setTip(15)">15%</button>
+        </div>
+        <h3 class="co-h" style="margin-top:22px">Payment</h3>
+        <p class="note" style="margin-bottom:11px">All transactions are secure and encrypted. In this demo, use the test card 4242 4242 4242 4242, any future date and any CVC.</p>
+        <label class="pay-opt"><input type="radio" name="paym" value="card" checked onchange="payChanged()"> 💳 Credit / debit card <span class="brand">VISA · MC · AMEX</span></label>
+        <div id="cardFields" style="padding:2px 2px 8px">
+          <div class="field"><input type="text" id="ccNum" placeholder="Card number" inputmode="numeric" oninput="fmtCard(this)"></div>
+          <div class="frow">
+            <div class="field"><input type="text" id="ccExp" placeholder="Expiry (MM / YY)" oninput="fmtExp(this)"></div>
+            <div class="field"><input type="text" id="ccCvc" placeholder="Security code" inputmode="numeric" maxlength="4"></div>
+          </div>
+          <div class="field"><input type="text" id="ccName" placeholder="Name on card"></div>
+        </div>
+        <label class="pay-opt"><input type="radio" name="paym" value="applepay" onchange="payChanged()">  Pay <span class="brand">Apple Pay</span></label>
+        <label class="pay-opt"><input type="radio" name="paym" value="googlepay" onchange="payChanged()"> G Pay <span class="brand">Google Pay</span></label>
+        <label class="pay-opt"><input type="radio" name="paym" value="paypal" onchange="payChanged()"> 🅿 PayPal <span class="brand">PayPal</span></label>
+        <label class="pay-opt" id="cashOpt"><input type="radio" name="paym" value="cash" onchange="payChanged()"> 💷 Cash <span class="brand">Pay at collection</span></label>
+        <p class="co-err" id="coErr"></p>
+        <button class="btn gold" id="payBtn" type="submit" style="width:100%;padding:16px;font-size:14px">Pay &amp; place order</button>
+        <p class="note" style="text-align:center;margin-top:10px">By placing this order you agree to be fed very well.</p>
+      </form>
+    </div>
+    <div class="co-right">
+      <div id="coItems"></div>
+      <div class="frow" style="margin-top:14px">
+        <div class="field" style="flex:1"><input type="text" id="coPromo" placeholder="Discount code or gift card"></div>
+        <button class="btn ghost small" type="button" onclick="applyPromo()" style="height:fit-content;margin-top:2px">Apply</button>
+      </div>
+      <p class="note" id="promoMsg" style="margin-top:-6px">Try the demo codes: <b>WELCOME10</b> (10% off your first direct order) or <b>FREEDEL</b> (free delivery).</p>
+      <div style="border-top:1px solid var(--line);margin-top:8px;padding-top:12px">
+        <div class="line-row dim"><span>Subtotal</span><span id="sumSub">£0.00</span></div>
+        <div class="line-row dim" id="rowDisc" style="display:none"><span>Discount (<span id="discName"></span>)</span><span id="sumDisc">−£0.00</span></div>
+        <div class="line-row dim" id="rowReward" style="display:none"><span>Namak Circle reward</span><span>−£5.00</span></div>
+        <div class="line-row dim"><span id="feeLabel">Delivery</span><span id="sumFee">—</span></div>
+        <div class="line-row dim" id="rowTip" style="display:none"><span>Tip</span><span id="sumTip">£0.00</span></div>
+        <div class="line-row" style="font-family:var(--serif);font-size:23px;font-weight:700;border-top:1px solid var(--line);margin-top:8px;padding-top:10px"><span>Total</span><span><span style="font-size:13px;color:var(--ink2);font-family:var(--sans);font-weight:400">GBP </span><span id="sumTotal">£0.00</span></span></div>
+        <p class="note" id="sumEta" style="margin-top:6px"></p>
+      </div>
+    </div>
+  </div>
+  <div class="co-confirm" id="coConfirm" style="display:none">
+    <div style="text-align:center;max-width:620px;margin:0 auto">
+      <div style="font-size:44px">🍽️</div>
+      <h2 style="font-size:36px;margin-top:6px">Shukriya — order confirmed</h2>
+      <p class="note" style="font-size:15px;margin-top:8px" id="confMeta"></p>
+      <div class="tracker" id="tracker" style="text-align:left;max-width:430px;margin-left:auto;margin-right:auto"></div>
+      <p class="note" id="confSms"></p>
+      <div style="margin-top:14px">
+        <p style="font-family:var(--serif);font-size:20px">How was everything?</p>
+        <div class="stars" id="confStars"><span data-s="1">★</span><span data-s="2">★</span><span data-s="3">★</span><span data-s="4">★</span><span data-s="5">★</span></div>
+        <p class="note" id="starNote">Tap to rate — in the live site this goes to the kitchen team and your order history.</p>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn" onclick="closeCheckout()">Back to the site</button>
+        <a class="btn ghost" href="#orders" onclick="closeCheckout()">See my orders &amp; points</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="explore-overlay" id="exploreOverlay">
+  <div class="ex-top">
+    <button class="pill ex-close" onclick="closeExplore()">Close</button>
+    <span class="ex-brand">Namak Mandi</span>
+    <button class="btn small" onclick="closeExplore();openPanel('bookPanel')">Book a table</button>
+  </div>
+  <nav class="ex-list">
+    <a href="#feasts" onclick="closeExplore()">Festivities &amp; Feasts</a>
+    <a href="#journal" onclick="closeExplore()">Latest</a>
+    <a href="#journal" onclick="closeExplore()">Recipes &amp; Guides</a>
+    <a href="#events" onclick="closeExplore()">Events</a>
+    <a href="#story" onclick="closeExplore()">Stories</a>
+    <a href="#orders" onclick="closeExplore()">Namak Circle</a>
+    <a href="#visit" onclick="closeExplore()">Find Us</a>
+  </nav>
+  <div class="ex-bottom">
+    <div class="ex-bh"><span style="font-family:var(--serif);font-style:italic;font-size:19px">The story continues</span><span style="font-size:11.5px;letter-spacing:.26em">VIEW ALL</span></div>
+    <div class="ex-cards">
+      <a class="ex-card" href="#story" onclick="closeExplore()"><img src="img/off-party.jpg" alt=""><span>The Namak Mandi Story</span></a>
+      <a class="ex-card" href="#journal" onclick="closeExplore()"><img src="https://junfeiguo.github.io/shopdemo/img/sleg.webp" alt=""><span>What is Lamb Sajji?</span></a>
+      <a class="ex-card" href="#journal" onclick="closeExplore()"><img src="img/off-blog3.webp" alt=""><span>Eating on the Floor</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="stickybar">
+  <a href="tel:+442087676120">☎ Call</a>
+  <button class="mid" onclick="openPanel('basketPanel')">Order · <span id="sbCount">0</span></button>
+  <button onclick="openPanel('bookPanel')">Book</button>
+</div>
+<a class="wa-float" href="https://wa.me/447428922871?text=Hello%20Namak%20Mandi%2C%20I%20have%20a%20question" target="_blank" rel="noopener">💬 WhatsApp us</a>
+<div class="cookie" id="cookieBox">
+  <h5>A word on cookies</h5>
+  <p>Ours are only the useful kind — they remember your basket, your favourites and your orders. No advertising, no tracking across the web.</p>
+  <div style="display:flex;gap:8px"><button class="btn small" onclick="cookieChoice(true)">Accept all</button><button class="btn ghost small" onclick="cookieChoice(false)">Essential only</button></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const IMG="https://junfeiguo.github.io/shopdemo/img/";
+const MENU=[
+{id:"chapli",cat:"Starters & Grill",name:"Peshawari Chapli Kebab",desc:"Hand-shaped spiced beef patties, crisp at the edges, soft in the middle. Our street-food classic.",tags:["Signature"],img:"chapli.webp",v:[["One",8.99]]},
+{id:"chapli3",cat:"Starters & Grill",name:"Chapli Kebab — Offer for Three",desc:"Three beef mince chapli patties, made to share.",v:[["Three",28.99]]},
+{id:"lchops",cat:"Starters & Grill",name:"Lamb Chops",desc:"From the grill, sold by weight as it should be.",v:[["¼ kg",16.49],["½ kg",27.49],["1 kg",43.99]]},
+{id:"ltikka",cat:"Starters & Grill",name:"Lamb Tikka",desc:"Char-grilled lamb pieces, gently spiced.",v:[["¼ kg",14.99],["½ kg",24.99],["1 kg",41.99]]},
+{id:"ctikka",cat:"Starters & Grill",name:"Chicken Tikka",desc:"Char-grilled chicken pieces, gently spiced.",v:[["¼ kg",9.99],["½ kg",16.99],["1 kg",27.99]]},
+{id:"mixedgrill",cat:"Starters & Grill",name:"Mixed Grill",desc:"Chicken and lamb tikka, lamb chops and chicken wings, straight off the fire.",tags:["Signature"],img:"mixgrill.webp",v:[["Medium",21.99],["Large",36.99]]},
+{id:"malaiboti",cat:"Starters & Grill",name:"Chicken Malai Boti",desc:"Creamy, mild-marinated chicken from the grill.",v:[["¼ kg",9.99],["½ kg",16.99],["1 kg",27.99]]},
+{id:"lribs",cat:"Starters & Grill",name:"Lamb Ribs",desc:"A generous portion of grilled lamb ribs.",v:[["Portion",15.99]]},
+{id:"mixedtikka",cat:"Starters & Grill",name:"Mixed Tikka",desc:"Lamb and chicken tikka together.",v:[["Portion",12.99]]},
+{id:"cwings",cat:"Starters & Grill",name:"Chicken Wings",desc:"Ten grilled chicken wings.",v:[["10 pieces",9.99]]},
+{id:"lseekh",cat:"Starters & Grill",name:"Lamb Seekh Kebab",desc:"Three hand-rolled lamb seekh kebabs.",v:[["3 pieces",7.49]]},
+{id:"cseekh",cat:"Starters & Grill",name:"Chicken Seekh Kebab",desc:"Three hand-rolled chicken seekh kebabs.",v:[["3 pieces",7.49]]},
+{id:"wrap-seekh",cat:"Wraps",name:"Seekh Kebab Wrap",desc:"Lamb seekh kebab wrapped in fresh naan.",v:[["One",6.49]]},
+{id:"wrap-chapli",cat:"Wraps",name:"Chapli Kebab Wrap",desc:"Beef chapli kebab wrapped in fresh naan.",v:[["One",10.49]]},
+{id:"wrap-ctikka",cat:"Wraps",name:"Chicken Tikka Wrap",desc:"Chicken tikka wrapped in fresh naan.",v:[["One",11.49]]},
+{id:"lkarahi",cat:"Karahi & Meat",name:"Namak Mandi Lamb Karahi",desc:"Lamb, tomatoes and spices cooked in the traditional style, over open flame. Our house signature.",tags:["Signature"],img:"lkarahi.webp",v:[["¼ kg",18.99],["½ kg",28.99],["1 kg",45.99]]},
+{id:"ckarahi",cat:"Karahi & Meat",name:"Charsi Chicken Karahi",desc:"Chicken karahi in the Charsi style — tomato, green chilli, ginger, flame.",img:"ckarahi.webp",v:[["¼ kg",11.99],["½ kg",18.99],["1 kg",29.99]]},
+{id:"seekhkarahi",cat:"Karahi & Meat",name:"Lamb Seekh Kebab Karahi",desc:"Seekh kebab finished in a karahi of tomato and spice.",v:[["¼ kg",9.99],["½ kg",15.99],["1 kg",24.99]]},
+{id:"dumpukht",cat:"Karahi & Meat",name:"Dumpukht",desc:"Slow-cooked lamb shank with vegetables, sealed and patient.",v:[["One",19.99]]},
+{id:"platter-classic",cat:"Platters",name:"The Classic Platter",desc:"A feast board for two, from the grill and the karahi.",v:[["Serves 2",29.99]]},
+{id:"platter-grand",cat:"Platters",name:"The Grand Platter",desc:"A feast board for three to four, made for the middle of the table.",v:[["Serves 3–4",59.99]]},
+{id:"platter-supreme",cat:"Platters",name:"The Supreme Platter",desc:"Our largest board — for six to seven hungry people.",v:[["Serves 6–7",119.99]]},
+{id:"sajji-leg",cat:"Lamb Sajji",name:"Lamb Sajji — Leg",desc:"A whole lamb leg, 2.5 to 3 kg, slow-roasted on the spit. Serves 4 to 5.",tags:["Pre-order"],img:"sleg.webp",v:[["Leg",99.99]]},
+{id:"sajji-half",cat:"Lamb Sajji",name:"Lamb Sajji — Half Lamb",desc:"Half a lamb, 6 to 7 kg, slow-roasted on the spit. Serves 8 to 10.",tags:["Pre-order"],img:"shalf.webp",v:[["Half lamb",199.99]]},
+{id:"sajji-whole",cat:"Lamb Sajji",name:"Lamb Sajji — Whole Lamb",desc:"A whole lamb, 13 to 14 kg — the full celebration. Serves 15 to 20.",tags:["Pre-order"],img:"swhole.webp",v:[["Whole lamb",349.99]]},
+{id:"seabass",cat:"Seafood",name:"Whole Sea Bass",desc:"A whole sea bass, served with Kabuli rice.",v:[["One",16.99]]},
+{id:"ribpulao",cat:"Rice",name:"Lamb Ribs Pulao",desc:"Pulao rice with lamb ribs.",v:[["Medium",12.99],["Large",18.99]]},
+{id:"kabulirice",cat:"Rice",name:"Kabuli Rice",desc:"Steamed rice, Kabuli style.",v:[["Medium",5.99],["Large",9.99]]},
+{id:"kabulipulao",cat:"Rice",name:"Kabuli Pulao",desc:"Sella basmati with carrots and raisins, cooked Afghan style with lamb shank and aromatic spices.",tags:["Signature"],img:"kabulipulao.webp",v:[["Medium",14.99],["Large",19.99]]},
+{id:"zeera",cat:"Rice",name:"Zeera Rice",desc:"Cumin rice.",tags:["Vegetarian"],v:[["Portion",4.99]]},
+{id:"naan",cat:"Breads & Vegetarian",name:"Plain Naan",desc:"Fresh from the tandoor.",tags:["Vegetarian"],v:[["Regular",1.75],["Regular with butter",1.90],["Large",3.49]]},
+{id:"roti",cat:"Breads & Vegetarian",name:"Roti",desc:"A simple, honest roti.",tags:["Vegetarian"],v:[["One",1.75]]},
+{id:"daal",cat:"Breads & Vegetarian",name:"Tarka Daal",desc:"Masoor lentils finished with a sizzling tarka.",tags:["Vegetarian"],v:[["Portion",8.99]]},
+{id:"chana",cat:"Breads & Vegetarian",name:"Chana Masala",desc:"Chickpeas in masala.",tags:["Vegetarian"],v:[["Portion",8.99]]},
+{id:"saag",cat:"Breads & Vegetarian",name:"Saag",desc:"Spinach, simply cooked.",tags:["Vegetarian"],v:[["Portion",8.99]]},
+{id:"fries",cat:"Kids",name:"Fries",desc:"A kids' portion of fries.",tags:["Vegetarian"],v:[["Portion",2.99]]},
+{id:"nuggets",cat:"Kids",name:"Chicken Nuggets with Fries",desc:"For smaller appetites.",v:[["Portion",6.99]]},
+{id:"fruitshoot",cat:"Kids",name:"Fruit Shoot",desc:"A kids' fruit drink.",v:[["One",1.99]]},
+{id:"firni",cat:"Dessert",name:"Firni",desc:"A traditional milk dessert, served cold.",v:[["One",1.49]]},
+{id:"soft",cat:"Drinks",name:"Soft Drinks",desc:"A choice of soft drinks — ask for today's selection.",v:[["One",1.99]]},
+{id:"mangolassi",cat:"Drinks",name:"Mango Lassi",desc:"Thick, sweet and unmistakably mango.",v:[["Glass",4.99],["Jug",11.99]]},
+{id:"sweetlassi",cat:"Drinks",name:"Sweet Lassi",desc:"The classic sweet yoghurt drink.",v:[["Glass",3.99],["Jug",9.99]]},
+{id:"saltylassi",cat:"Drinks",name:"Salty Lassi",desc:"Salted yoghurt drink, the traditional way.",v:[["Glass",3.99],["Jug",9.99]]},
+{id:"lemonsoda",cat:"Drinks",name:"Lemon Soda",desc:"Sharp, cold and refreshing.",v:[["Glass",3.99],["Jug",9.99]]},
+{id:"oj",cat:"Drinks",name:"Fresh Orange Juice",desc:"Freshly squeezed oranges.",v:[["Glass",4.99],["Jug",11.99]]},
+{id:"water",cat:"Drinks",name:"Mineral Water",desc:"Still mineral water.",v:[["500 ml",1.75],["1.5 L",3.49]]}
+];
+const CATS=["All","Starters & Grill","Wraps","Karahi & Meat","Platters","Lamb Sajji","Seafood","Rice","Breads & Vegetarian","Kids","Dessert","Drinks"];
+const JOURNAL=[
+{t:"How to order for a table of four",x:"New to Peshawari food? Here is the order our own families start with.",f:"Begin with chapli kebab and a tikka from the grill while the karahi cooks. Then share a lamb karahi and a chicken karahi in the middle of the table, a Kabuli pulao beside them, and naan torn and passed around. That is the shape of a proper Peshawari meal: grilled things first, karahi at the centre, rice and bread to carry it."},
+{t:"Why karahi is cooked over a flame",x:"A deep, heavy pan, fierce heat, and no patience for shortcuts.",f:"The karahi is not a sauce with meat in it; it is meat, tomato and spice meeting at high heat. The flame breaks the tomatoes down fast, the spices bloom in the oil, and the edges of the meat catch a little smoke. It comes to the table still in its pan, because a karahi is for sharing, not for plating."},
+{t:"What is Lamb Sajji?",x:"The celebration dish of Balochistan and Peshawar — a leg, a half, or the whole lamb.",f:"Sajji is seasoned simply and roasted slowly until the meat falls from the bone. It is the centrepiece of weddings and great gatherings, which is why we cook it to order and ask for a day's notice. Order a leg for a family table, or a whole lamb when the whole street is coming."},
+{t:"Chapli kebab, explained",x:"Flat, spiced, fried until the edges crisp — Peshawar's street-corner icon.",f:"The chapli takes its name from its flat shape. Minced beef is worked with pomegranate seeds, coriander and crushed spices, shaped by hand and fried until the edges are crisp and the middle stays soft. Eaten with naan and a squeeze of lemon, it is the taste of a Peshawar bazaar."},
+{t:"Eating on the floor",x:"Why we keep the traditional floor seating — and how to try it.",f:"In Peshawar, a great meal is often eaten the traditional way: cushions around a low table, shoes off, food in the middle, everyone close. We keep that corner of the restaurant because some of our guests grew up eating that way — and because newcomers usually love it. Ask for floor seating when you book, or take a table and chairs; both are equally welcome."},
+{t:"Dining with allergies",x:"Tell us first, and we will walk through the menu with you.",f:"Our kitchen uses nuts, dairy, gluten and sesame across many dishes, and pans are shared — so please tell us about any allergy when you book, order or sit down. We will check the ingredients of the dishes you fancy and help you choose well. There is a fuller guide in the allergens section of the menu."}];
+const FAQS=[
+["Do you take reservations?","Yes — book above or call 020 8767 6120. Tables are yours for two hours and we hold them for 15 minutes. At busy times and on public holidays, some tables are first come, first served."],
+["Can I come in a group?","Happily. Book online for up to 20 guests; groups dine in our dedicated spaces. Weekend group bookings have their own timing, so a quick call helps us plan. For ten or more, see Private dining."],
+["Is the food halal?","Yes — everything. All of our food is halal and HMC approved."],
+["Where is the restaurant, and can I park?","25 Upper Tooting Road, London SW17 7TS — one minute from Tooting Bec station. Street parking nearby is usually free."],
+["Is there a prayer space?","Yes — ask the team and we will arrange a space in the restaurant. Tooting Islamic Centre is also a short walk away."],
+["Do you serve alcohol?","No. We do not serve alcohol, and it cannot be brought in. There are lassis, fresh juices and lemon soda instead."],
+["Do I need to pre-order Lamb Sajji?","Yes — Sajji needs one day's notice. Choose a leg, a half or a whole lamb in Feasts, and we confirm it with a deposit."],
+["Do you deliver?","Delivery rides with Uber Eats, Deliveroo and Just Eat. For collection, order here and pick up from the counter — payment is taken when you collect."],
+["What about allergies?","Tell us when you book, order or are seated, and we will check the ingredients of your dishes with you. See the allergens section above the booking form."]];
+</script>
+
+<script>
+let basket={};
+try{basket=JSON.parse(localStorage.getItem("nm-basket-v3")||"{}")}catch(e){basket={}}
+let activeCat="All", giftAmt=50;
+const fmt=n=>"£"+n.toFixed(2);
+const JIMG=["g1.webp","gate.webp","sleg.webp","chapli.webp","g2.webp","g3.webp"];
+function dishById(id){return MENU.find(d=>d.id===id)}
+function saveBasket(){localStorage.setItem("nm-basket-v3",JSON.stringify(basket));renderBasket()}
+function addToBasket(id,variantLabel){
+  const d=dishById(id);const v=d.v.find(x=>x[0]===variantLabel)||d.v[0];const key=id+"|"+v[0];
+  if(!basket[key])basket[key]={id:id,variant:v[0],price:v[1],qty:0};
+  basket[key].qty++;saveBasket();toast("Added: "+d.name+" ("+v[0]+")");
+}
+function changeQty(key,delta){if(!basket[key])return;basket[key].qty+=delta;if(basket[key].qty<=0)delete basket[key];saveBasket()}
+function basketCount(){return Object.values(basket).reduce((s,i)=>s+i.qty,0)}
+function basketTotal(){return Object.values(basket).reduce((s,i)=>s+i.qty*i.price,0)}
+function basketLines(){return Object.values(basket).map(i=>{const d=dishById(i.id);return "• "+d.name+" ("+i.variant+") × "+i.qty+" — "+fmt(i.price*i.qty)}).join("\n")}
+function marks(d){let m="";if((d.tags||[]).includes("Vegetarian"))m+='<span class="mark">(V)</span>';if((d.tags||[]).includes("Signature"))m+='<span class="mark">(S)</span>';if((d.tags||[]).includes("Pre-order"))m+='<span class="mark">(P)</span>';return m}
+function rowHtml(d){
+  const sel=d.v.length>1?'<select id="sel-'+d.id+'" onchange="updPrice(\''+d.id+'\')">'+d.v.map(v=>'<option value="'+v[0]+'">'+v[0]+" — "+fmt(v[1])+"</option>").join("")+"</select>":"";
+  return '<div class="mrow"><div class="tx"><h5>'+d.name+"</h5>"+marks(d)+'<span class="ds">'+d.desc+"</span></div>"+sel+'<span class="pr" id="price-'+d.id+'">'+fmt(d.v[0][1])+'</span><button class="add-btn" title="Add to basket" onclick="addFromRow(\''+d.id+'\')">+</button></div>';
+}
+function updPrice(id){const d=dishById(id);const s=document.getElementById("sel-"+id);const v=d.v.find(x=>x[0]===s.value);document.getElementById("price-"+id).textContent=fmt(v[1])}
+function addFromRow(id){const s=document.getElementById("sel-"+id);addToBasket(id,s?s.value:undefined)}
+const CATSUB={"Starters & Grill":"To begin, and from the fire","Wraps":"Rolled in fresh naan","Karahi & Meat":"From the pan, over flame","Platters":"For the middle of the table","Lamb Sajji":"Pre-order · One day's notice","Seafood":"From the grill","Rice":"Pulao, rice & all the good things","Breads & Vegetarian":"From the tandoor & the pot","Kids":"For smaller appetites","Dessert":"One small sweet thing","Drinks":"Lassis, juices & sodas"};
+function renderMenu(){
+  const q=(document.getElementById("menuSearch").value||"").toLowerCase();
+  const veg=document.getElementById("vegOnly").checked,hidePre=document.getElementById("hidePre").checked;
+  const list=document.getElementById("menuList");let html="",shown=0;
+  CATS.slice(1).forEach(cat=>{
+    if(activeCat!=="All"&&activeCat!==cat)return;
+    const terms=q.split(/\s+/).filter(Boolean);
+    const items=MENU.filter(d=>d.cat===cat)
+      .filter(d=>!terms.length||terms.every(t=>new RegExp("\\b"+t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"i").test(d.name+" "+d.desc+" "+d.cat)))
+      .filter(d=>!veg||(d.tags||[]).includes("Vegetarian"))
+      .filter(d=>!hidePre||!(d.tags||[]).includes("Pre-order"));
+    if(!items.length)return;
+    html+='<div class="mcat">'+cat+'</div><div class="mcat-sub">'+(CATSUB[cat]||"")+"</div>";
+    items.forEach(d=>{html+=rowHtml(d);shown++});
+  });
+  list.innerHTML=html||'<div class="empty-msg">No dishes match — try clearing the search or filters.</div>';
+}
+function renderTabs(){
+  document.getElementById("catTabs").innerHTML=CATS.map(c=>'<button class="mtab'+(c===activeCat?" on":"")+'" onclick="setCat(\''+c.replace(/'/g,"\\'")+'\')">'+c+"</button>").join("");
+}
+function setCat(c){activeCat=c;renderTabs();renderMenu()}
+function renderSig(){
+  document.getElementById("sigRow").innerHTML=MENU.filter(d=>(d.tags||[]).includes("Signature")).map(d=>'<div class="sig"><img src="'+IMG+d.img+'" alt="'+d.name+'" loading="lazy"><div class="b"><h4>'+d.name+'</h4><p>'+d.desc+'</p><div class="tagrow"><span class="tag hot">Café classic</span><span class="tag">Halal</span></div><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:var(--serif);font-size:20px;font-weight:700">from '+fmt(Math.min.apply(null,d.v.map(v=>v[1])))+'</span><button class="add-btn" onclick="addToBasket(\''+d.id+'\')">+</button></div></div></div>').join("");
+}
+function renderFeasts(){
+  const items=MENU.filter(d=>d.cat==="Lamb Sajji"||d.cat==="Platters");
+  document.getElementById("feastCards").innerHTML=items.map(d=>'<div class="feast">'+'<img src="'+(d.img?('https://junfeiguo.github.io/shopdemo/'+d.img):'img/off-mixedgrill.jpg')+'" alt="">'+'<div class="serves">'+d.v[0][0]+(d.cat==="Lamb Sajji"?" · Pre-order, 1 day":" · Sharing")+'</div><h4>'+d.name+'</h4><p>'+d.desc+'</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="price">'+fmt(d.v[0][1])+'</span><button class="btn gold small" onclick="addToBasket(\''+d.id+'\')">Add</button></div></div>').join("");
+}
+function renderBasket(){
+  document.getElementById("basketCount").textContent=basketCount();
+  const box=document.getElementById("basketItems");const keys=Object.keys(basket);
+  if(!keys.length)box.innerHTML='<p class="note" style="text-align:center;padding:26px 0">Your basket is empty.<br>Browse the menu and add something delicious.</p>';
+  else box.innerHTML=keys.map(k=>{const i=basket[k],d=dishById(i.id);return '<div class="bitem"><div><div class="nm">'+d.name+'</div><div class="vr">'+i.variant+" · "+fmt(i.price)+'</div><div class="qty"><button onclick="changeQty(\''+k+'\',-1)">−</button><span>'+i.qty+'</span><button onclick="changeQty(\''+k+'\',1)">+</button></div></div><div style="font-family:var(--serif);font-size:19px;font-weight:700">'+fmt(i.price*i.qty)+"</div></div>"}).join("");
+  document.getElementById("basketTotal").textContent=fmt(basketTotal());
+}
+function openPanel(id){closePanels();document.getElementById(id).classList.add("open");document.getElementById("scrim").classList.add("show")}
+function closePanels(){document.querySelectorAll(".panel").forEach(p=>p.classList.remove("open"));document.getElementById("scrim").classList.remove("show")}
+function toggleMobile(){const m=document.getElementById("mobileMenu");m.style.display=m.style.display==="block"?"none":"block"}
+function toggleSearch(){document.getElementById("searchbar").classList.toggle("show");const i=document.getElementById("siteSearch");if(i)i.focus()}
+function scrollToId(id){const el=document.getElementById(id);if(el&&el.scrollIntoView)el.scrollIntoView({behavior:"smooth",block:"center"})}
+function siteGo(){const q=document.getElementById("siteSearch").value;document.getElementById("menuSearch").value=q;activeCat="All";renderTabs();renderMenu();scrollToId("menu")}
+let toastTimer;
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200)}
+function showSummary(elId,text){
+  const el=document.getElementById(elId);el.textContent=text;
+  const b=document.createElement("button");b.className="btn ghost small";b.textContent="Copy this request";
+  b.onclick=()=>{if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>toast("Copied — paste it into a message or email to the restaurant"));else toast("Copy not available here")};
+  const c=document.createElement("a");c.className="btn small";c.href="tel:+442087676120";c.textContent="Or call 020 8767 6120";
+  el.appendChild(document.createElement("br"));el.appendChild(b);el.appendChild(c);el.classList.add("show");
+  if(el.scrollIntoView)el.scrollIntoView({behavior:"smooth",block:"center"});
+}
+function slotList(openHour){const out=[];for(let h=openHour;h<=22;h++){out.push(h+":00");if(h<22)out.push(h+":30")}return out}
+function fillTimes(){
+  const inp=document.getElementById("bkDate"),sel=document.getElementById("bkTime"),note=document.getElementById("bkHoursNote");
+  if(!inp.value){sel.innerHTML="";return}
+  const d=new Date(inp.value+"T12:00:00"),day=d.getDay(),open=day===5?14:12;
+  sel.innerHTML=slotList(open).map(t=>"<option>"+t+"</option>").join("");
+  note.textContent=day===5?"Fridays we open at 2pm — times start at 14:00.":"We open at 12pm that day — last booking 22:00, kitchen until midnight.";
+}
+function initBooking(){
+  const g=document.getElementById("bkGuests");
+  g.innerHTML=Array.from({length:20},(_,i)=>'<option value="'+(i+1)+'"'+(i===1?" selected":"")+">"+(i+1)+(i===0?" guest":" guests")+"</option>").join("");
+  const iso=new Date().toISOString().slice(0,10),inp=document.getElementById("bkDate");inp.min=iso;inp.value=iso;fillTimes();
+  const ct=document.getElementById("coTime");let opts='<option>As soon as possible</option>';
+  slotList(12).forEach(t=>opts+="<option>"+t+"</option>");opts+="<option>23:00</option><option>23:30</option>";ct.innerHTML=opts;
+}
+function submitBooking(e){
+  e.preventDefault();
+  const name=document.getElementById("bkName").value.trim(),phone=document.getElementById("bkPhone").value.trim();
+  const guests=document.getElementById("bkGuests").value,date=document.getElementById("bkDate").value,time=document.getElementById("bkTime").value;
+  const seat=document.getElementById("bkSeating").value,email=document.getElementById("bkEmail").value.trim(),notes=document.getElementById("bkNotes").value.trim();
+  const pre=document.getElementById("bkPreorder").checked;
+  const niceDate=new Date(date+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+  let txt="BOOKING REQUEST — Namak Mandi (Tooting)\nName: "+name+"\nPhone: "+phone+(email?"\nEmail: "+email:"")+"\nGuests: "+guests+"\nDate: "+niceDate+"\nTime: "+time+"\nSeating: "+seat;
+  if(notes)txt+="\nNotes: "+notes;
+  if(pre&&basketCount())txt+="\n\nPre-order (from basket):\n"+basketLines()+"\nBasket total: "+fmt(basketTotal());
+  else if(pre)txt+="\n\nPre-order: basket was empty — no food pre-ordered.";
+  txt+="\n\n(Demo prototype: prepared on this page, not sent. Your table is confirmed only when the restaurant replies.)";
+  showSummary("bookSummary",txt);return false;
+}
+function submitOrder(){
+  if(!basketCount()){toast("Your basket is empty — add a dish from the menu first");return}
+  const name=document.getElementById("coName").value.trim(),phone=document.getElementById("coPhone").value.trim();
+  if(!name||!phone){toast("Please add your name and phone so we can call when it is ready");return}
+  let txt="COLLECTION ORDER — Namak Mandi (Tooting)\nName: "+name+"\nPhone: "+phone+"\nCollection time: "+document.getElementById("coTime").value+"\n\n"+basketLines()+"\nTotal (pay on collection): "+fmt(basketTotal());
+  const n=document.getElementById("coNotes").value.trim();if(n)txt+="\nNotes / allergies: "+n;
+  txt+="\n\n(Demo prototype: prepared on this page, not sent. Payment is taken when you collect.)";
+  showSummary("orderSummary",txt);
+}
+function submitEvent(e){
+  e.preventDefault();
+  const txt="EVENT ENQUIRY — Namak Mandi\nName: "+document.getElementById("evName").value.trim()+"\nPhone: "+document.getElementById("evPhone").value.trim()+"\nEmail: "+(document.getElementById("evEmail").value.trim()||"—")+"\nDate: "+(document.getElementById("evDate").value||"To be decided")+"\nGuests: "+(document.getElementById("evGuests").value||"—")+"\nType: "+document.getElementById("evType").value+"\nDetails: "+(document.getElementById("evMsg").value.trim()||"—")+"\n\n(Demo prototype: prepared on this page, not sent.)";
+  showSummary("eventSummary",txt);return false;
+}
+function goGift(n){setGift(n);scrollToId("giftForm")}
+function setGift(n){giftAmt=n;document.querySelectorAll("#giftAmounts button").forEach(b=>b.classList.toggle("on",b.textContent==="£"+n));updGift()}
+function updGift(){
+  document.getElementById("gpAmt").textContent="£"+giftAmt;
+  const f=document.getElementById("gfFor").value.trim(),m=document.getElementById("gfMsg").value.trim();
+  document.getElementById("gpFor").textContent="For: "+(f||"—");
+  document.getElementById("gpMsg").textContent=m?("“"+m+"”"):"";
+}
+function submitGift(e){
+  e.preventDefault();
+  const txt="GIFT CARD REQUEST — Namak Mandi\nAmount: £"+giftAmt+"\nFrom: "+document.getElementById("gfName").value.trim()+" ("+document.getElementById("gfPhone").value.trim()+")\nFor: "+(document.getElementById("gfFor").value.trim()||"—")+"\nMessage: "+(document.getElementById("gfMsg").value.trim()||"—")+"\n\nNothing is charged here — we confirm details and arrange payment directly. (Demo prototype: not sent.)";
+  showSummary("giftSummary",txt);return false;
+}
+function submitNews(e){
+  e.preventDefault();
+  const txt="Thank you, "+document.getElementById("nwName").value.trim()+". You are on the list at "+document.getElementById("nwEmail").value.trim()+" — first word on feast nights and new dishes will come to you there. (Demo prototype: no email has been recorded or sent.)";
+  const el=document.getElementById("newsSummary");el.textContent=txt;el.classList.add("show");return false;
+}
+function copyAddress(){const a="Namak Mandi, 25 Upper Tooting Road, London SW17 7TS";if(navigator.clipboard)navigator.clipboard.writeText(a).then(()=>toast("Address copied"));else toast(a)}
+function renderJournal(){
+  document.getElementById("journalRow").innerHTML=JOURNAL.map((j,i)=>'<div class="jcard" id="jc'+i+'"><img src="'+IMG+JIMG[i%JIMG.length]+'" alt="" loading="lazy"><div class="b"><div class="tagrow" style="display:flex;gap:6px;margin-bottom:8px"><span class="tag hot">From the kitchen</span><span class="tag">Guide</span></div><h4>'+j.t+"</h4><p>"+j.x+'</p><p class="full">'+j.f+'</p><button class="more" onclick="document.getElementById(\'jc'+i+'\').classList.toggle(\'open\');this.textContent=document.getElementById(\'jc'+i+'\').classList.contains(\'open\')?\'Read less\':\'Read the story\'">Read the story</button></div></div>').join("");
+}
+function renderFaq(){
+  document.getElementById("faqList").innerHTML=FAQS.map(f=>"<details><summary>"+f[0]+"</summary><div class='bd'>"+f[1]+"</div></details>").join("");
+}
+renderTabs();renderMenu();renderSig();renderFeasts();renderBasket();renderJournal();renderFaq();initBooking();
+</script>
+
+<script>
+/* ———————— v4: images, favourites, sold-out ———————— */
+const LOCALIMG={"chapli":"img/off-chapli.webp","ckarahi":"img/off-ckarahi.jpg","ctikka":"img/off-ctikka.jpg","malaiboti":"img/off-ctikka.jpg","dumpukht":"img/off-dumpukht.jpg","firni":"img/off-firni.jpg","lseekh":"img/off-seekh.jpg","cseekh":"img/off-seekh.jpg","sajji-half":"img/off-sajji-half.jpg","sajji-whole":"img/off-sajji-whole.jpg","sajji-leg":"img/off-sajji-leg.jpg","kabulipulao":"img/off-pulao.jpg","mangolassi":"img/off-mango-lassi.jpg","sweetlassi":"img/off-lassi.jpg","saltylassi":"img/off-lassi.jpg","lemonsoda":"img/off-lemon.jpg","oj":"img/off-juice.jpg","mixedgrill":"img/off-mixedgrill.jpg","lkarahi":"img/off-lkarahi.jpg","naan":"img/off-naan.jpg","saag":"img/off-saag.webp","daal":"img/off-daal.webp","ltikka":"img/off-tikka.jpg","lchops":"img/lamb-chops.jpg","cwings":"img/chicken-wings-s.jpg","seabass":"img/sea-bass.jpg"};
+const SOLDOUT={seabass:"Sold out today",dumpukht:"Sold out today"};
+let favs={};try{favs=JSON.parse(localStorage.getItem("nm-favs-v4")||"{}")}catch(e){favs={}}
+function dishImg(d){if(LOCALIMG[d.id])return LOCALIMG[d.id];if(d.img)return IMG+d.img;return null}
+function toggleFav(id){favs[id]=!favs[id];if(!favs[id])delete favs[id];localStorage.setItem("nm-favs-v4",JSON.stringify(favs));renderMenu();toast(favs[id]?"Saved to your favourites":"Removed from favourites")}
+rowHtml=function(d){
+  const out=SOLDOUT[d.id];
+  const img=dishImg(d),thumb=img?'<img class="mthumb" src="'+img+'" alt="" loading="lazy">':"";
+  const sel=d.v.length>1?'<select id="sel-'+d.id+'" onchange="updPrice(\''+d.id+'\')">'+d.v.map(v=>'<option value="'+v[0]+'">'+v[0]+" — "+fmt(v[1])+"</option>").join("")+"</select>":"";
+  const right=out?'<span class="soldout">'+out+'</span>':'<span class="pr" id="price-'+d.id+'">'+fmt(d.v[0][1])+'</span><button class="add-btn" title="Add to basket" onclick="addFromRow(\''+d.id+'\')">+</button>';
+  return '<div class="mrow'+(out?" out":"")+'">'+thumb+'<div class="tx"><h5>'+d.name+"</h5>"+marks(d)+'<span class="ds">'+d.desc+"</span></div>"+sel+right+'<button class="fav-btn'+(favs[d.id]?" on":"")+'" title="Favourite" onclick="toggleFav(\''+d.id+'\')">'+(favs[d.id]?"♥":"♡")+"</button></div>";
+};
+const _renderMenu4=renderMenu;
+renderMenu=function(){
+  const favBox=document.getElementById("favOnly");
+  if(favBox&&favBox.checked){
+    const q=(document.getElementById("menuSearch").value||"").toLowerCase();
+    const list=document.getElementById("menuList");
+    const items=MENU.filter(d=>favs[d.id]).filter(d=>!q||new RegExp("\\b"+q,"i").test(d.name+" "+d.desc));
+    list.innerHTML=items.length?'<div class="mcat">Your favourites</div><div class="mcat-sub">The dishes you come back for</div>'+items.map(rowHtml).join(""):'<div class="empty-msg">No favourites yet — tap the ♡ on any dish and it will wait for you here.</div>';
+    return;
+  }
+  _renderMenu4();
+};
+/* basket: spice level + note per item, upsell */
+renderBasket=function(){
+  document.getElementById("basketCount").textContent=basketCount();
+  const sb=document.getElementById("sbCount");if(sb)sb.textContent=basketCount();
+  const box=document.getElementById("basketItems");const keys=Object.keys(basket);
+  if(!keys.length)box.innerHTML='<p class="note" style="text-align:center;padding:26px 0">Your basket is empty.<br>Browse the menu and add something delicious.</p>';
+  else box.innerHTML=keys.map(k=>{const i=basket[k],d=dishById(i.id);return '<div class="bitem"><div style="flex:1"><div class="nm">'+d.name+'</div><div class="vr">'+i.variant+" · "+fmt(i.price)+'</div><div class="qty"><button onclick="changeQty(\''+k+'\',-1)">−</button><span>'+i.qty+'</span><button onclick="changeQty(\''+k+'\',1)">+</button></div><select onchange="basketMeta(\''+k+'\',\'spice\',this.value)"><option value="Classic"'+(i.spice==="Classic"||!i.spice?" selected":"")+'>Heat: classic Peshawari (gentle)</option><option value="Milder"'+(i.spice==="Milder"?" selected":"")+'>Heat: milder</option><option value="Hotter"'+(i.spice==="Hotter"?" selected":"")+'>Heat: hotter, please</option></select><input type="text" placeholder="Note for the kitchen (no coriander…)" value="'+(i.note?i.note.replace(/"/g,"&quot;"):"")+'" onchange="basketMeta(\''+k+'\',\'note\',this.value)"></div><div style="font-family:var(--serif);font-size:19px;font-weight:700">'+fmt(i.price*i.qty)+"</div></div>"}).join("")+upsellHtml();
+  document.getElementById("basketTotal").textContent=fmt(basketTotal());
+};
+function basketMeta(key,field,val){if(basket[key]){basket[key][field]=val;saveBasket()}}
+function upsellHtml(){
+  const have=id=>Object.values(basket).some(i=>i.id===id);
+  const sugg=[["naan","Plain Naan"],["mangolassi","Mango Lassi"],["firni","Firni"]].filter(s=>!have(s[0]));
+  if(!sugg.length)return"";
+  return '<div class="upsell"><h5>Complete the table</h5>'+sugg.map(s=>{const d=dishById(s[0]);return '<div class="u-row"><span>'+d.name+" · "+fmt(d.v[0][1])+'</span><button class="btn ghost small" onclick="addToBasket(\''+s[0]+'\')">Add</button></div>'}).join("")+"</div>";
+}
+/* ———————— v4: open-now status (London time) ———————— */
+function londonNow(){return new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/London"}))}
+function openInfo(){
+  const n=londonNow(),day=n.getDay(),h=n.getHours()+n.getMinutes()/60;
+  const open=day===5?14:12;
+  if(h>=open&&h<24)return{open:true,msg:"Open now · Kitchen until 12am"};
+  if(h<open)return{open:false,msg:"Closed · Opens today at "+(open===14?"2pm":"12pm")+" — order ahead for then"};
+  return{open:false,msg:"Closed · Opens tomorrow at "+(((day+1)%7)===5?"2pm":"12pm")};
+}
+function paintStatus(){const el=document.getElementById("openPill");if(!el)return;const i=openInfo();el.classList.toggle("closed",!i.open);el.innerHTML='<span class="dot"></span>'+i.msg+' · Tooting'}
+/* ———————— v4: checkout ———————— */
+let orderMode="delivery",orderWhen="asap",tipPct=0,promo=null,currentOrder=null,trackTimer=null;
+function ordersGet(){try{return JSON.parse(localStorage.getItem("nm-orders-v4")||"[]")}catch(e){return[]}}
+function pointsSpent(){return parseInt(localStorage.getItem("nm-points-spent-v4")||"0")}
+function pointsBalance(){return ordersGet().reduce((s,o)=>s+(o.points||0),0)-pointsSpent()}
+function zoneFor(pc){
+  const m=(pc||"").toUpperCase().replace(/\s+/g," ").trim().match(/^([A-Z]{1,2}\d[A-Z\d]?)/);
+  if(!m)return null;const out=m[1];
+  if(["SW17","SW16","SW18","SW19","CR4"].includes(out))return{zone:"Near",fee:2.49,freeOver:35,eta:"35–50 min"};
+  if(/^S[WE]/.test(out))return{zone:"Wider London",fee:3.99,freeOver:50,eta:"50–70 min"};
+  return{zone:"out"};
+}
+function deliveryFee(){
+  if(orderMode==="collection")return 0;
+  const z=zoneFor(document.getElementById("coPostcode").value);if(!z||z.zone==="out")return null;
+  const sub=basketTotal()-(promo&&promo.type==="pct"?basketTotal()*promo.val/100:0);
+  if(promo&&promo.type==="freedel")return 0;
+  return sub>=z.freeOver?0:z.fee;
+}
+function totals(){
+  const sub=basketTotal();
+  const disc=promo&&promo.type==="pct"?Math.round(sub*promo.val)/100:0;
+  const reward=pointsBalance()>=100?5:0;
+  const fee=deliveryFee();
+  const tip=Math.round((sub-disc)*tipPct)/100;
+  const total=Math.max(0,Math.round((sub-disc-reward+(fee||0)+tip)*100)/100);
+  return{sub,disc,reward,fee,tip,total};
+}
+function orderNow(m){orderMode=m;if(basketCount()){openCheckout()}else{openPanel("basketPanel");toast("Add a dish or two first — your basket is waiting on the right")}}
+function openCheckout(){
+  if(!basketCount()){toast("Your basket is empty — add a dish first");return}
+  closePanels();
+  document.getElementById("coMain").style.display="grid";
+  document.getElementById("coConfirm").style.display="none";
+  document.getElementById("checkoutOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+  renderCheckout();
+}
+function closeCheckout(){document.getElementById("checkoutOverlay").classList.remove("open");document.body.style.overflow="";if(trackTimer)clearInterval(trackTimer)}
+function setMode(m){
+  orderMode=m;
+  document.getElementById("segDelivery").classList.toggle("on",m==="delivery");
+  document.getElementById("segCollection").classList.toggle("on",m==="collection");
+  document.getElementById("deliveryFields").style.display=m==="delivery"?"block":"none";
+  document.getElementById("collectionFields").style.display=m==="collection"?"block":"none";
+  document.getElementById("cashOpt").style.opacity=m==="collection"?"1":".45";
+  document.getElementById("feeLabel").textContent=m==="delivery"?"Delivery":"Collection";
+  renderSummary();
+}
+function setWhen(w){
+  orderWhen=w;
+  document.getElementById("whenAsap").classList.toggle("on",w==="asap");
+  document.getElementById("whenLater").classList.toggle("on",w==="later");
+  document.getElementById("whenField").style.display=w==="later"?"block":"none";
+  if(w==="later")fillWhenSlots();renderSummary();
+}
+function fillWhenSlots(){
+  const sel=document.getElementById("coWhen");const n=londonNow();let html="";
+  for(let dOff=0;dOff<2;dOff++){
+    const d=new Date(n);d.setDate(d.getDate()+dOff);
+    const open=d.getDay()===5?14:12;const label=dOff===0?"Today":"Tomorrow";
+    for(let h=open;h<23;h++){html+="<option>"+label+" · "+h+":00</option>";html+="<option>"+label+" · "+h+":30</option>"}
+  }
+  sel.innerHTML=html;
+}
+function zoneChanged(){renderSummary();
+  const z=zoneFor(document.getElementById("coPostcode").value);const box=document.getElementById("shipBox");
+  if(!document.getElementById("coPostcode").value){box.textContent="Enter your postcode and we will work out your zone, fee and arrival time.";return}
+  if(!z){box.textContent="That postcode doesn't look complete yet…";return}
+  if(z.zone==="out"){box.innerHTML="You are outside our own delivery area — but not out of luck: order the same food on <b>Uber Eats, Deliveroo or Just Eat</b>, or collect from Tooting.";return}
+  box.innerHTML="<b>"+z.zone+" delivery</b> · "+fmt(z.fee)+" (free over "+fmt(z.freeOver)+") · arrives in about <b>"+z.eta+"</b> · minimum order £12.";
+}
+function setTip(p){tipPct=p;document.querySelectorAll("#tipChips button").forEach(b=>b.classList.toggle("on",parseInt(b.dataset.tip)===p));renderSummary()}
+function applyPromo(){
+  const code=(document.getElementById("coPromo").value||"").trim().toUpperCase();const msg=document.getElementById("promoMsg");
+  if(code==="WELCOME10"){promo={type:"pct",val:10,name:"WELCOME10"};msg.innerHTML="✓ <b>WELCOME10 applied</b> — 10% off. Welcome to ordering direct."}
+  else if(code==="FREEDEL"){promo={type:"freedel",name:"FREEDEL"};msg.innerHTML="✓ <b>FREEDEL applied</b> — delivery is on us."}
+  else if(code){promo=null;msg.innerHTML="That code doesn't ring a bell — check it and try again."}
+  renderSummary();
+}
+function renderCheckout(){renderSummary();
+  document.getElementById("coItems").innerHTML=Object.values(basket).map(i=>{const d=dishById(i.id);const img=dishImg(d);return '<div class="co-item"><span class="co-thumbwrap">'+(img?'<img class="co-thumb" src="'+img+'" alt="">':'<span class="co-thumb" style="display:block"></span>')+'<span class="co-qty">'+i.qty+'</span></span><span class="nm">'+d.name+'<span class="vr">'+i.variant+(i.spice&&i.spice!=="Classic"?" · "+i.spice:"")+"</span></span><span>"+fmt(i.price*i.qty)+"</span></div>"}).join("");
+  setMode(orderMode);
+}
+function renderSummary(){
+  const t=totals();
+  document.getElementById("sumSub").textContent=fmt(t.sub);
+  document.getElementById("rowDisc").style.display=t.disc?"flex":"none";
+  if(t.disc)document.getElementById("discName").textContent=promo.name;
+  document.getElementById("sumDisc").textContent="−"+fmt(t.disc);
+  document.getElementById("rowReward").style.display=t.reward?"flex":"none";
+  document.getElementById("sumFee").textContent=t.fee===null?"Enter postcode":(t.fee===0?"Free":fmt(t.fee));
+  document.getElementById("rowTip").style.display=t.tip?"flex":"none";
+  document.getElementById("sumTip").textContent=fmt(t.tip);
+  document.getElementById("sumTotal").textContent=fmt(t.total);
+  const z=zoneFor(document.getElementById("coPostcode").value);
+  document.getElementById("sumEta").textContent=orderMode==="collection"?"Collection in about 15–25 min from the counter, Tooting.":(z&&z.zone!=="out"?"Estimated arrival: "+z.eta+" after the kitchen confirms.":"");
+  document.getElementById("payBtn").textContent=(document.querySelector('input[name="paym"]:checked')||{}).value==="cash"?"Place order · Pay at collection":"Pay "+fmt(t.total)+" & place order";
+}
+function payChanged(){
+  const v=(document.querySelector('input[name="paym"]:checked')||{}).value;
+  document.getElementById("cardFields").style.display=v==="card"?"block":"none";
+  renderSummary();
+}
+function fmtCard(el){el.value=el.value.replace(/\D/g,"").slice(0,16).replace(/(.{4})/g,"$1 ").trim()}
+function fmtExp(el){let v=el.value.replace(/\D/g,"").slice(0,4);el.value=v.length>2?v.slice(0,2)+" / "+v.slice(2):v}
+function err(m){document.getElementById("coErr").textContent=m;if(m)document.getElementById("coErr").scrollIntoView&&document.getElementById("coErr").scrollIntoView({behavior:"smooth",block:"center"})}
+function placeOrder(e){
+  e.preventDefault();err("");
+  const pay=(document.querySelector('input[name="paym"]:checked')||{}).value||"card";
+  const email=document.getElementById("coEmail").value.trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return err("A valid email is needed — your confirmation goes there."),false;
+  let name="",phone="";
+  if(orderMode==="delivery"){
+    name=(document.getElementById("coFirst").value+" "+document.getElementById("coLast").value).trim();
+    phone=document.getElementById("coPhone").value.trim();
+    if(document.getElementById("coFirst").value.trim().length<1)return err("Please add your first name for the driver."),false;
+    if(!document.getElementById("coAddr").value.trim())return err("Please add your delivery address."),false;
+    const z=zoneFor(document.getElementById("coPostcode").value);
+    if(!z)return err("Please add a valid UK postcode."),false;
+    if(z.zone==="out")return err("That postcode is outside our delivery area — switch to Collection, or find us on Uber Eats / Deliveroo / Just Eat."),false;
+    if(basketTotal()<12)return err("Direct delivery starts at £12 — add a little more, or switch to free collection."),false;
+    if(phone.replace(/\D/g,"").length<7)return err("Please add a phone number the driver can reach."),false;
+  }else{
+    name=document.getElementById("coNameC").value.trim();phone=document.getElementById("coPhoneC").value.trim();
+    if(!name)return err("Please add the name for the collection order."),false;
+    if(phone.replace(/\D/g,"").length<7)return err("Please add a phone number so we can call when it is ready."),false;
+  }
+  if(pay==="card"){
+    const num=document.getElementById("ccNum").value.replace(/\s/g,"");
+    if(num.length<15)return err("That card number looks short — the demo accepts 4242 4242 4242 4242."),false;
+    const ex=document.getElementById("ccExp").value.replace(/\D/g,"");
+    if(ex.length<4||parseInt(ex.slice(0,2))<1||parseInt(ex.slice(0,2))>12)return err("Please add the card expiry as MM / YY."),false;
+    if(document.getElementById("ccCvc").value.trim().length<3)return err("Please add the 3-digit security code."),false;
+  }
+  if(pay==="cash"&&orderMode==="delivery")return err("Cash works for collection — for delivery, please pay by card or wallet."),false;
+  const t=totals();
+  const no="NM-"+Math.floor(1000+Math.random()*9000);
+  const items=Object.values(basket).map(i=>({id:i.id,variant:i.variant,price:i.price,qty:i.qty,spice:i.spice||"Classic",note:i.note||""}));
+  const order={no,items,total:t.total,mode:orderMode,when:orderWhen==="later"?document.getElementById("coWhen").value:"ASAP",pay,points:Math.floor(t.total),at:new Date().toISOString(),rating:0};
+  const all=ordersGet();all.unshift(order);localStorage.setItem("nm-orders-v4",JSON.stringify(all));
+  if(t.reward)localStorage.setItem("nm-points-spent-v4",String(pointsSpent()+100));
+  basket={};saveBasket();
+  currentOrder=order;showConfirmation(order,t);
+  renderHistory();
+  return false;
+}
+function showConfirmation(order,t){
+  document.getElementById("coMain").style.display="none";
+  const c=document.getElementById("coConfirm");c.style.display="block";
+  document.getElementById("confMeta").innerHTML="Order <b>"+order.no+"</b> · "+(order.mode==="delivery"?"Delivery":"Collection")+" · "+order.when+" · Total <b>"+fmt(order.total)+"</b><br>You earned <b>"+order.points+" Namak Circle points</b>. A confirmation is on its way to your email and phone. <i>(Demo — statuses advance every 15 seconds so you can watch it work.)</i>";
+  document.getElementById("confSms").textContent="📱 Text preview: “Namak Mandi: order "+order.no+" confirmed. We will message again when it leaves the kitchen.”";
+  const steps=order.mode==="delivery"?["Order received","Accepted by the kitchen","In the kitchen — over the fire","On its way to you","Delivered — enjoy"]:["Order received","Accepted by the kitchen","In the kitchen — over the fire","Ready to collect","Collected — enjoy"];
+  const tr=document.getElementById("tracker");
+  const draw=idx=>{tr.innerHTML=steps.map((s,i)=>'<div class="tstep'+(i<idx?" done":i===idx?" now":"")+'"><span class="ic">'+(i<idx?"✓":i+1)+'</span><span><span class="tt">'+s+'</span><br><span class="ts">'+(i<idx?"Done":i===idx?"Happening now":"Coming up")+"</span></span></div>").join("")};
+  let idx=0;draw(0);
+  if(trackTimer)clearInterval(trackTimer);
+  trackTimer=setInterval(()=>{idx++;if(idx>=steps.length){idx=steps.length-1;clearInterval(trackTimer)}draw(idx)},15000);
+  document.querySelectorAll("#confStars span").forEach(sp=>{sp.classList.remove("on");sp.onclick=()=>{const v=parseInt(sp.dataset.s);document.querySelectorAll("#confStars span").forEach(x=>x.classList.toggle("on",parseInt(x.dataset.s)<=v));document.getElementById("starNote").textContent="Thank you — "+v+" stars, noted with your order. The kitchen will be pleased.";const all=ordersGet();const o=all.find(x=>x.no===order.no);if(o){o.rating=v;localStorage.setItem("nm-orders-v4",JSON.stringify(all));renderHistory()}}});
+  if(c.scrollIntoView)c.scrollIntoView();
+}
+function renderHistory(){
+  const all=ordersGet();const box=document.getElementById("orderHistory");if(!box)return;
+  document.getElementById("pointsBalance").textContent=pointsBalance()+" pts";
+  document.getElementById("pointsNote").textContent=pointsBalance()>=100?"You have a £5 reward — it comes off automatically at checkout.":("Earn "+(100-pointsBalance())+" more points for £5 off.");
+  if(!all.length){box.innerHTML='<p class="note">No orders yet in this browser. Your first direct order will appear here — with a one-tap reorder.</p>';return}
+  box.innerHTML=all.slice(0,5).map(o=>'<div class="order-card"><h4>Order '+o.no+' · '+fmt(o.total)+'</h4><p class="note">'+new Date(o.at).toLocaleString("en-GB")+" · "+(o.mode==="delivery"?"Delivery":"Collection")+" · "+o.items.reduce((s,i)=>s+i.qty,0)+" items · +"+o.points+" pts"+(o.rating?" · ★".repeat(o.rating):"")+'</p><p style="font-size:14px;margin:6px 0">'+o.items.map(i=>dishById(i.id).name+" ("+i.variant+") × "+i.qty).join(" · ")+'</p><button class="btn ghost small" onclick="reorder(\''+o.no+'\')">↻ Reorder this</button></div>').join("");
+}
+function reorder(no){
+  const o=ordersGet().find(x=>x.no===no);if(!o)return;let skipped=0;
+  o.items.forEach(i=>{if(SOLDOUT[i.id]){skipped++;return}const d=dishById(i.id);const v=d.v.find(x=>x[0]===i.variant)||d.v[0];const key=i.id+"|"+v[0];if(!basket[key])basket[key]={id:i.id,variant:v[0],price:v[1],qty:0};basket[key].qty+=i.qty});
+  saveBasket();openPanel("basketPanel");
+  toast(skipped?"Rebuilt your order — "+skipped+" sold-out dish was left out":"Your order is back in the basket");
+}
+/* ———————— v4: explore overlay, cookie, misc ———————— */
+function openExplore(){document.getElementById("exploreOverlay").classList.add("open")}
+function closeExplore(){document.getElementById("exploreOverlay").classList.remove("open")}
+function cookieChoice(ok){localStorage.setItem("nm-cookie-v4",ok?"all":"essential");document.getElementById("cookieBox").classList.remove("show");toast(ok?"Cookies accepted — basket and favourites will be remembered":"Essential cookies only")}
+function paintV4(){
+  paintStatus();
+  const mp=document.querySelector('.nav .pills a[href="#story"]');
+  if(mp){mp.setAttribute("onclick","openExplore();return false;")}
+  if(!localStorage.getItem("nm-cookie-v4"))setTimeout(()=>document.getElementById("cookieBox").classList.add("show"),1200);
+  const ob=document.querySelector('#basketPanel .foot .btn');
+  renderHistory();
+}
+paintV4();
+renderMenu();renderBasket();
+</script>
+
+
+
+<script>
+(function(){try{
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll("section .wrap>*,.gal figure,.trip figure,.parallax .q").forEach(function(el){el.classList.add("rv");io.observe(el)});
+}catch(e){}})();
+</script>
+</body>
+</html>
