@@ -1,0 +1,14 @@
+name = "namak-mandi-assistant"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://junfeiguo.github.io"
+MODEL = "claude-haiku-5-5"
+# Secrets (set with `npx wrangler secret put NAME`, never put them in this file):
+#   ANTHROPIC_API_KEY   your Claude API key
+#   NOTIFY_WEBHOOK      Slack/Discord/Make/Zapier incoming-webhook URL for new bookings and orders
+# Optional email alert through Resend:
+#   RESEND_API_KEY, NOTIFY_EMAIL, FROM_EMAIL
+# Optional, only for a real phone line (voice/README.md):
+#   PHONE_TOOL_SECRET   shared secret the phone platform sends in the x-secret header to /tool
